@@ -1,0 +1,519 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Educational Toys | Little Buds Japan Imports</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7cce2;
+      margin: 0;
+      padding: 0;
+    }
+
+   .product-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+    }
+    .product {
+      border: 1px solid #ddd;
+      padding: 15px;
+      max-width: 250px;
+      text-align: center; 
+      background:  #f4f4f4;
+      border-radius: 8px;
+    }
+    .gallery img {
+      width: 100%;
+      height: auto;
+      border-radius: 5px;}
+    .thumbs img {
+      width: 70px;
+      margin: 5px;
+      cursor: pointer;
+      border: 2px solid transparent;
+      border-radius: 4px;
+    }
+
+    .thumbs img:hover {
+      border-color: #999;
+    }
+
+    .price {
+      font-weight: bold;
+      color: #c2185b;
+      font-size: 1.2em;
+      margin: 10px 0;
+    }
+
+    button {
+      padding: 10px 15px;
+      background-color: #ff4081;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .whatsapp-button {
+      display: inline-block;
+      margin-top: 10px;
+      background-color: #25D366;
+      color: white;
+      padding: 10px 15px;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
+      background:  #f7cce2;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    }
+
+    .logo img {
+      height: 50px;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #333;
+    }
+
+    .cart-icon {
+      position: fixed;
+      top: 15px;
+      right: 15px;
+      z-index: 1000;
+    }
+
+    .cart-icon img {
+      width: 40px;
+      height: 40px;
+    }
+
+    #cart-count {
+      position: absolute;
+      top: -5px;
+      right: -5px;
+      background: red;
+      color: white;
+      font-size: 12px;
+      border-radius: 50%;
+      padding: 2px 6px;
+    }
+
+    .search-bar {
+      text-align: center;
+      margin: 20px auto 10px;
+    }
+
+    #searchInput {
+      padding: 10px;
+      width: 90%;
+      max-width: 400px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #f3f3f3;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Cart Icon -->
+  <a href="cart.html" class="cart-icon">
+    <img src="images/cart-icon.png" alt="Cart" />
+    <span id="cart-count">0</span>
+  </a>
+
+  <!-- Header -->
+  <header>
+       <div class="logo">
+      <a href="index.html"><img src="images/logo.png" alt="Logo" /></a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="delivery.html">Delivery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </nav>
+    
+  </header>
+
+  <!-- Search -->
+  <div class="search-bar">
+    <input type="text" id="searchInput" placeholder="Search educational toys..." oninput="filterProducts()" />
+  </div>
+
+  <main>
+    <h2 style="text-align:center; margin: 20px;">Educational Toys</h2>
+    <div class="product-grid">
+
+      <!-- Toy 1 -->
+      <div class="product product-item">
+        <div class="gallery">
+          <img class="main-img" src="images/finger.jpg" id="finger" alt="finger math mat" />
+          <div class="thumbs">
+            <img onclick="document.getElementById('finger').src='images/finger1.jpg'" src="images/finger1.jpg" />
+            <img onclick="document.getElementById('finger').src='images/finger2.jpg'" src="images/finger2.jpg" />
+ <img onclick="document.getElementById('finger').src='images/finger.jpg'" src="images/finger.jpg" />
+          </div>
+        </div>
+        <h2>Finger Math Mat</h2>
+ <div class="description">
+          <ul>
+    <li>Learning to count (1–10)</li>
+ <li>Practicing basic addition and subtraction</li>
+    
+    <li>Improving number recognition and sequencing</li>
+    <li>Supporting hands-on, sensory learning</li>
+  </ul>
+
+  <h3>🎨 Product Features:</h3>
+  <ul>
+    <li>10 bright felt finger flaps (perfect for little hands!)</li>
+    <li>Soft, durable, and safe for kids</li>
+    <li>Lightweight and foldable — ideal for travel or classroom use</li>
+    <li>Great for preschool, kindergarten, or home learning setups</li>
+  </ul>
+</div>
+        <p class="price">Rs. 1,160</p>
+        <button onclick="addToCart('finger math mat', 1160)">Add to Cart</button>
+        <a class="whatsapp-button" href="https://wa.me/94779552234?text=Hi! I'm interested in the finger math mat.">Order via WhatsApp</a>
+      </div>
+
+<div class="product product-item" data-name="20-in-1 Montessori Busy Board">
+  <div class="gallery">
+    <img class="main-img" src="images/dino.jpg" id="busy-board-img" alt="20-in-1 Montessori Busy Board - Educational Sensory Toy">
+    <div class="thumbs">
+      <img onclick="document.getElementById('busy-board-img').src='images/dino3.jpg'" src="images/dino3.jpg" alt="Front view of Montessori Busy Board">
+      <img onclick="document.getElementById('busy-board-img').src='images/dino2.jpg'" src="images/dino2.jpg" alt="Montessori Busy Board with activities">
+      <img onclick="document.getElementById('busy-board-img').src='images/dino.jpg'" src="images/dino.jpg" alt="Montessori Busy Board main view">
+      <img onclick="document.getElementById('busy-board-img').src='images/dino4.jpg'" src="images/dino4.jpg" alt="Montessori Busy Board alternative view">
+    </div>
+  </div>
+
+  <h3>20-in-1 Montessori Busy Board</h3>
+  <p>
+    Colorful, educational, and travel-friendly sensory toy designed to develop fine motor skills, problem-solving abilities, and basic life skills in toddlers and preschoolers.  
+    Includes zippers, buckles, shoelaces, buttons, beads, clock, and more — all on a soft felt board with cute animal alphabet and number designs.
+  </p>
+
+  <h4>Features</h4>
+  <ul>
+    <li>20 activities: buckles, buttons, zippers, shoelaces, beads, clock, hook & loop, snap totes, and more.</li>
+    <li>Encourages color recognition, spelling, and practical life skills.</li>
+    <li>Lightweight (0.6 lbs) and compact (11" × 8.7") — perfect for travel by car, plane, or vacation trips.</li>
+    <li>Made from soft, safe, CPSC-certified felt with reinforced accessories.</li>
+    <li>Ideal gift for toddlers, preschoolers, and individuals with special needs (autism, stroke, Alzheimer's).</li>
+  </ul>
+
+  <h4>Suggested Age</h4>
+  <p>For ages 1–4 years. Kids under 3 years should play under adult supervision.</p>
+
+<p class="price">Rs. 1,160</p>
+        <button onclick="addToCart('20-in-1 Montessori Busy Board', 1160)">Add to Cart</button>
+        <a class="whatsapp-button" href="https://wa.me/94779552234?text=Hi! I'm interested in the 20-in-1 Montessori Busy Board.">Order via WhatsApp</a>
+      </div>
+
+
+
+
+
+
+
+
+
+      <!-- Toy 2 -->
+       <!-- Toy 1 -->
+      <div class="product product-item">
+        <div class="gallery">
+          <img class="main-img" src="images/book.jpg" id="book" alt="busy board book" />
+          <div class="thumbs">
+            <img onclick="document.getElementById('book').src='images/book1.jpg'" src="images/book1.jpg" />
+            <img onclick="document.getElementById('book').src='images/book2.jpg'" src="images/book2.jpg" />
+ <img onclick="document.getElementById('book').src='images/book.jpg'" src="images/book.jpg" />
+          </div>
+        </div>
+        
+ <div class="product-description">
+  <h2>Early Learning Activity Book</h2>
+<ul>
+  
+    <li>A variety of age-appropriate and engaging activities designed in a fun, kid-friendly way — perfect for children before preschool age!</li>
+  </ul>
+
+  <p><strong>Activities include:</strong> 👇</p>
+  <ul>
+    <li>▪️ Number Learning</li>
+    <li>▪️ Colour Identification</li>
+    <li>▪️ Logical Thinking (Math-Based Activities)</li>
+    <li>▪️ Basic Addition</li>
+    <li>▪️ Fruits and Vegetables Recognition</li>
+    <li>▪️ Emotions and Expressions</li>
+    <li>▪️ Matching and Sorting Activities</li>
+  </ul>
+
+  <p><strong>Benefits:</strong></p>
+  <ul>
+    <li>▪️ Promotes Fine Motor Skills</li>
+    <li>▪️ Supports Cognitive Development</li>
+    <li>▪️ Improves Focus and Attention</li>
+    <li>▪️ Reduces Screen Time</li>
+  </ul>
+
+  <p><strong>Includes:</strong> 15 pages and more than 50 activities 😍</p>
+
+  <p>These activities help support early development in a playful and interactive way! 🤩</p>
+</div>
+        <p class="price">Rs, 1480</p>
+        <button onclick="addToCart('Early Learning Activity Book', 1480)">Add to Cart</button>
+        <a class="whatsapp-button" href="https://wa.me/94779552234?text=Hi! I'm interested in the Early Learning Activity Book.">Order via WhatsApp</a>
+      </div>
+ <div class="product product-item">
+        <div class="gallery">
+          <img class="main-img" src="images/tenthouse.jpg" id="house" alt="Tent House" />
+          <div class="thumbs">
+            <img onclick="document.getElementById('house').src='images/tenthouse1.jpg'" src="images/tenthouse1.jpg" />
+            <img onclick="document.getElementById('house').src='images/tenthouse2.jpg'" src="images/tenthouse2.jpg" />
+ <img onclick="document.getElementById('house').src='images/tenthouse.jpg'" src="images/tenthouse.jpg" />
+          </div>
+        </div>
+        <div class="description">
+
+  <h2>Zoo Theme Tent House 🦁🐘</h2>
+  
+
+  <p>Create a fun and exciting play space with this colorful Zoo Theme Tent House! Perfect for indoor or outdoor use, this tent is decorated with adorable jungle animals that will spark your child’s imagination. 🎪</p>
+
+  <p><strong>Key Features:</strong></p>
+  <ul>
+    <li>🌟 Eye-catching zoo design with friendly animals like lions, giraffes, zebras, and more</li>
+    <li>📏 Dimensions: <strong>92cm (Length) × 68cm (Width) × 104cm (Height)</strong></li>
+    <li>👧👦 Spacious enough for 2-3 children to play comfortably</li>
+    <li>🧩 Requires easy assembly using included plastic tubes and connectors</li>
+    <li>🚫 <strong>Not foldable</strong> – stays sturdy once assembled</li>
+    <li>🌬️ Mesh windows for airflow and visibility</li>
+    <li>🎁 A perfect birthday or holiday gift</li>
+  </ul>
+
+  <p><strong>Assembly Required:</strong> Includes a set of plastic support tubes for setup. Instructions are simple and easy to follow.</p>
+  <p><strong>Material:</strong> Durable polyester fabric and lightweight plastic frame</p>
+
+  <p>This tent house turns playtime into a wild jungle adventure! Great for storytelling, pretend play, or simply relaxing in their own little world. 🌿🦒🦓</p>
+</div>
+<p class="price">Rs. 4630</p>
+        <button onclick="addToCart('Tent Play House', 4630)">Add to Cart</button>
+        <a class="whatsapp-button" href="https://wa.me/94779552234?text=Hi! I'm interested in the Tent House.">Order via WhatsApp</a>
+      </div>
+ <div class="product product-item">
+  <div class="gallery">
+    <img class="main-img" src="images/vpuz.jpg" id="vpuz-main" alt="Vehicle Puzzle Main Image" />
+    <div class="thumbs">
+      <img onclick="document.getElementById('vpuz-main').src='images/vpuz2.jpg'" src="images/vpuz2.jpg" alt="Vehicle Puzzle Alternate View" />
+      <img onclick="document.getElementById('vpuz-main').src='images/vpuz.jpg'" src="images/vpuz.jpg" alt="Vehicle Puzzle Front View" />
+    </div>
+  </div>
+
+  <div class="product-description">
+    <h2>Wooden Traffic Vehicles Puzzle 🚌🚓🚑</h2>
+    
+
+    <p>This colorful wooden puzzle features a variety of traffic and emergency vehicles that kids will love! Perfect for hands-on play and early learning, it’s both fun and educational. 🚗✨</p>
+
+    <ul>
+      <li>🧠 Enhances hand-eye coordination and problem-solving skills</li>
+      <li>🎨 Bright colors and fun shapes for visual stimulation</li>
+      <li>🪵 Made from durable, child-safe wood</li>
+      <li>🧩 Chunky pieces – easy for little hands to grasp and place</li>
+      <li>🌟 Encourages early vocabulary and vehicle recognition</li>
+    </ul>
+
+    <p>Great for toddlers and preschoolers, this puzzle is a perfect gift to inspire learning through play! 🎁</p>
+  </div>
+
+  <p class="price">Rs. 680</p>
+  <button onclick="addToCart('Vehicle Puzzle', 680)">Add to Cart</button>
+  <a class="whatsapp-button" href="https://wa.me/94779552234?text=Hi! I'm interested in the Wooden Vehicle Puzzle." target="_blank">Order via WhatsApp</a>
+</div>
+ <div class="product product-item">
+        <div class="gallery">
+          <img class="main-img" src="images/ballslide.jpg" id="ballslide" alt="ball slide block" />
+          <div class="thumbs">
+            <img onclick="document.getElementById('ballslide').src='images/ballslide2.jpg'" src="images/ballslide2.jpg" />
+            <img onclick="document.getElementById('ballslide').src='images/ballslide.jpg'" src="images/ballslide.jpg" />
+</div>
+        </div>
+<div class="product-description">
+  <h2>Mini Ball Slide Block Set 🎢✨</h2>
+  <p><strong>Price:</strong>Rs 520</p>
+
+  <p>Get ready for exciting marble run action! This Mini Ball Slide Block Set lets kids build their own colorful tracks and watch the balls race through twists and turns. 🟡🔴🔵</p>
+
+  <p><strong>What’s Included:</strong></p>
+  <ul>
+    <li>🧱 A variety of interlocking blocks and slide pieces</li>
+    
+    <li>🔵 mini marble balls to race through the maze</li>
+  </ul>
+
+  <p><strong>Key Benefits:</strong></p>
+  <ul>
+    <li>🧠 Boosts logical thinking, creativity & STEM skills</li>
+    <li>👐 Improves hand-eye coordination and fine motor skills</li>
+    <li>🎨 Bright and safe plastic pieces — easy for small hands</li>
+    <li>🏗️ Endless design combinations for hours of play</li>
+  </ul>
+
+  <p>This interactive playset is a great way to introduce kids to early engineering and problem-solving — all while having a blast! 🚀</p>
+</div>
+<p class="price">Rs. 520</p>
+        <button onclick="addToCart('mini ball slide block', 520)">Add to Cart</button>
+        <a class="whatsapp-button" href="https://wa.me/94779552234?text=Hi! I'm interested in the Ball SlideBlock.">Order via WhatsApp</a>
+      </div>
+ <div class="product product-item">
+        <div class="gallery">
+          <img class="main-img" src="images/emoji.jpg" id="emoji" alt="Wooden Emotions Eggs Puzzle" />
+          <div class="thumbs">
+            <img onclick="document.getElementById('emoji').src='images/emoji1.jpg'" src="images/emoji.jpg" />
+            <img onclick="document.getElementById('emoji').src='images/emoji2.jpg'" src="images/emoji2.jpg" />
+ <img onclick="document.getElementById('emoji').src='images/emoji3.jpg'" src="images/emoji3.jpg" />
+ <img onclick="document.getElementById('emoji').src='images/emoji.jpg'" src="images/emoji.jpg" />
+</div>
+        </div>
+
+<div class="product-description">
+  <h3>🧠 Wooden Emotions Matching Puzzle </h3>
+  <ul>
+    <li>✅ <strong>Portable Design:</strong> Compact and easy to carry — perfect for travel and on-the-go fun for boys and girls.</li>
+    <li>🎨 <strong>Montessori Learning Tool:</strong> Encourages hand-eye coordination, fine motor skills, and problem-solving through shape and expression matching.</li>
+    <li>😊 <strong>Emotion Recognition:</strong> Helps children identify and match expressions like happy, sad, angry, and excited using visual cues.</li>
+    <li>🪵 <strong>Durable Wooden Build:</strong> Made from high-quality, child-safe wood for long-lasting and safe playtime.</li>
+    <li>🎓 <strong>Educational & Engaging:</strong> Supports emotional development and cognitive skills through interactive learning.</li>
+    <li>👨‍👩‍👧‍👦 <strong>Interactive Playtime:</strong> Great for solo play or bonding with parents, teachers, or friends.</li>
+    <li>🎯 <strong>Early Learning Focus:</strong> Trains observation, concentration, and emotional understanding in a fun, hands-on way.</li>
+  </ul>
+</div>
+
+<p class="price">Rs. 940</p>
+        <button onclick="addToCart('Wooden Emotions Matching Puzzle', 940)">Add to Cart</button>
+        <a class="whatsapp-button" href="https://wa.me/94779552234?text=Hi! I'm interested in the Wooden Emotions Matching Puzzle">Order via WhatsApp</a>
+      </div>
+<div class="product product-item">
+  <div class="gallery">
+    <img class="main-img" src="images/pop.jpg" id="pop-main" alt="Pop Fidget Tubes Main Image" />
+    <div class="thumbs">
+      <img onclick="document.getElementById('pop-main').src='images/pop1.jpg'" src="images/pop1.jpg" alt="Pop Tube Variation 1" />
+      <img onclick="document.getElementById('pop-main').src='images/pop2.jpg'" src="images/pop2.jpg" alt="Pop Tube Variation 2" />
+      <img onclick="document.getElementById('pop-main').src='images/pop.jpg'" src="images/pop.jpg" alt="Original Pop Tube" />
+ <img onclick="document.getElementById('pop-main').src='images/pop3.jpg'" src="images/pop3.jpg" alt="Original Pop Tube" />
+ <img onclick="document.getElementById('pop-main').src='images/pop4.jpg'" src="images/pop4.jpg" alt="Original Pop Tube" />
+ <img onclick="document.getElementById('pop-main').src='images/pop5.jpg'" src="images/pop5.jpg" alt="Original Pop Tube" />
+    </div>
+  </div>
+
+  <!-- Instructions -->
+  <section class="product-instructions">
+    <h3>How to Play with Pop Fidget Tubes</h3>
+    <ul>
+      <li>🌀 <strong>Stretch it out:</strong> Pull the tube to extend it and enjoy the satisfying <em>pop-pop</em> sound.</li>
+      <li>🔄 <strong>Compress to snap back:</strong> Push the tube together to return it to its compact size.</li>
+      <li>🎵 <strong>Bend & twist:</strong> Shape the tube into curves and spirals for extra popping noises.</li>
+      <li>🎨 <strong>Link tubes together:</strong> Connect multiple tubes end-to-end to build creative structures or wearable loops.</li>
+      <li>🤲 <strong>Fidget for focus:</strong> Squeeze, twist or wobble the tube to relieve stress and improve concentration.</li>
+      <li>👂 <strong>Sensory play:</strong> Combines sound, texture and movement—great for tactile & auditory development.</li>
+    </ul>
+  </section>
+
+  <!-- Price & Buttons -->
+  <p class="price">Rs. 1,380</p>
+  <button onclick="addToCart('Pop Fidget Tubes', 1380)">Add to Cart</button>
+  <a class="whatsapp-button" href="https://wa.me/94779552234?text=Hi! I'm interested in the Pop Fidget Tubes" target="_blank">Order on WhatsApp</a>
+</div>
+<div class="product product-item">
+  <div class="gallery">
+    <img class="main-img" src="images/ball.jpg" id="ball-main" alt="Breathing Ball (Hoberman Sphere)" />
+    <div class="thumbs">
+      <img onclick="document.getElementById('ball-main').src='images/ball1.jpg'" src="images/ball1.jpg" alt="Breathing Ball Alternate View 1" />
+      <img onclick="document.getElementById('ball-main').src='images/ball2.jpg'" src="images/ball2.jpg" alt="Breathing Ball Alternate View 2" />
+      <img onclick="document.getElementById('ball-main').src='images/ball.jpg'" src="images/ball.jpg" alt="Breathing Ball Default View" />
+    </div>
+  </div>
+
+  <div class="product-description">
+    <h3>✨ Breathing Ball (Hoberman Sphere)</h3>
+    <ul>
+      <li>🌈 <strong>Expandable Fun:</strong> Gently pull the ball outward and watch it grow up to twice its size — then push it back in!</li>
+      <li>🧘 <strong>Breathing & Calm:</strong> Perfect tool for teaching deep breathing exercises to kids and adults — expand as you inhale, contract as you exhale.</li>
+      <li>👶 <strong>Great for All Ages:</strong> Ideal for sensory development, emotional regulation, classroom mindfulness, or just fun!</li>
+      <li>🎓 <strong>Learning Aid:</strong> Supports social-emotional learning, mindfulness activities, and focus improvement.</li>
+      <li>🌿 <strong>Durable & Lightweight:</strong> Made from safe, flexible plastic that's easy to carry anywhere.</li>
+      <li>🎁 <strong>Perfect Gift:</strong> Great as a calming toy, party favor, or educational tool.</li>
+    </ul>
+  </div>
+
+  <p class="price">Rs. 1,200</p>
+  <button onclick="addToCart('Breathing Ball', 1200)">Add to Cart</button>
+  <a class="whatsapp-button" href="https://wa.me/94779552234?text=Hi! I'm interested in the Breathing Ball." target="_blank">Order via WhatsApp</a>
+</div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Little Buds Japan Imports | Akurana, Kandy, Sri Lanka</p>
+  </footer>
+
+  <script>
+    function addToCart(name, price) {
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+      cart.push({ name, price });
+      localStorage.setItem('cart', JSON.stringify(cart));
+      updateCartCount();
+      alert(name + " has been added to your cart.");
+    }
+
+    function updateCartCount() {
+      const cart = JSON.parse(localStorage.getItem('cart')) || [];
+      document.getElementById('cart-count').textContent = cart.length;
+    }
+
+    function filterProducts() {
+      const input = document.getElementById("searchInput").value.toLowerCase();
+      const products = document.querySelectorAll(".product-item");
+      products.forEach(product => {
+        product.style.display = product.textContent.toLowerCase().includes(input) ? "block" : "none";
+      });
+    }
+
+    updateCartCount();
+  </script>
+
+</body>
+</html>

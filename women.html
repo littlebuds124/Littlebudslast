@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Home & Women Accessories | Little Buds Japan Imports</title>
+  <link rel="stylesheet" href="styles.css" />
+ <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7cce2;
+      margin: 0;
+      padding: 0;
+    }
+
+   .product-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+    }
+    .product {
+      border: 1px solid #ddd;
+      padding: 15px;
+      max-width: 250px;
+      text-align: center; my
+      background:  #f4f4f4;
+      border-radius: 8px;
+    }
+    .gallery img {
+      width: 100%;
+      height: auto;
+      border-radius: 5px;}
+    .thumbs img {
+      width: 70px;
+      margin: 5px;
+      cursor: pointer;
+      border: 2px solid transparent;
+      border-radius: 4px;
+    }
+
+    .thumbs img:hover {
+      border-color: #999;
+    }
+
+    .price {
+      font-weight: bold;
+      color: #c2185b;
+      font-size: 1.2em;
+      margin: 10px 0;
+    }
+
+    button {
+      padding: 10px 15px;
+      background-color: #ff4081;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .whatsapp-button {
+      display: inline-block;
+      margin-top: 10px;
+      background-color: #25D366;
+      color: white;
+      padding: 10px 15px;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
+      background:  #f7cce2;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    }
+
+    .logo img {
+      height: 50px;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #333;
+    }
+
+    .cart-icon {
+      position: fixed;
+      top: 15px;
+      right: 15px;
+      z-index: 1000;
+    }
+
+    .cart-icon img {
+      width: 40px;
+      height: 40px;
+    }
+
+    #cart-count {
+      position: absolute;
+      top: -5px;
+      right: -5px;
+      background: red;
+      color: white;
+      font-size: 12px;
+      border-radius: 50%;
+      padding: 2px 6px;
+    }
+
+    .search-bar {
+      text-align: center;
+      margin: 20px auto 10px;
+    }
+
+    #searchInput {
+      padding: 10px;
+      width: 90%;
+      max-width: 400px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #f3f3f3;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Cart Icon -->
+  <a href="cart.html" class="cart-icon">
+    <img src="images/cart-icon.png" alt="Cart" />
+    <span id="cart-count">0</span>
+  </a>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <a href="index.html"><img src="images/logo.png" alt="Logo" /></a>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="delivery.html">Delivery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Search Bar -->
+  <div class="search-bar">
+    <input type="text" id="searchInput" placeholder="Search accessories..." oninput="filterProducts()" />
+  </div>
+
+  <main>
+    <h2 style="text-align:center; margin-top:20px;">Women Accessories</h2>
+    <div class="product-grid">
+
+      <!-- Product 1 -->
+      
+
+
+<!-- Japanese Hair Drying Cap Product -->
+<div class="product product-item">
+  <div class="gallery">
+    <img class="main-img" src="images/cap1.jpg" id="acc-cap" alt="Japanese Hair Drying Cap">
+    <div class="thumbs">
+      <img onclick="document.getElementById('acc-cap').src='images/cap.jpg'" src="images/cap.jpg" />
+      <img onclick="document.getElementById('acc-cap').src='images/cap1.jpg'" src="images/cap1.jpg" />
+    </div>
+  </div>
+
+  <h3>🧖 Japanese Hair Drying Cap</h3>
+  <div class="description">
+    <ul>
+      <li>🌟 Soft microfiber material</li>
+      <li>🌀 Quick-dry & reusable</li>
+      <li>🎨 Available in 6 colors</li>
+      <li>📏 Free size – fits all</li>
+    </ul>
+    <p><strong>Ideal for:</strong> Daily use after showers, spa routines, or travel.</p>
+    <p><strong>Care:</strong> Hand or machine wash with mild detergent.</p>
+  </div>
+
+  <p class="price">Rs. 720</p>
+  <button onclick="addToCart('Japanese Hair Drying Cap', 720)">Add to Cart</button>
+  <a class="whatsapp-button" href="https://wa.me/94779552234?text=Hi! I'm interested in the Japanese Hair Drying Cap.">Order via WhatsApp</a>
+</div>
+
+<div class="product product-item">
+  <div class="gallery">
+    <img class="main-img" src="images/goat.jpg" id="goat" alt="Goat milk soap">
+    <div class="thumbs">
+      <img onclick="document.getElementById('goat').src='images/goat1.jpg'" src="images/goat1.jpg" alt="Goat milk soap image 1" />
+      <img onclick="document.getElementById('goat').src='images/goat3.jpg'" src="images/goat3.jpg" alt="Goat milk soap image 2" />
+      <img onclick="document.getElementById('goat').src='images/goat.jpg'" src="images/goat.jpg" alt="Goat milk soap main" />
+    </div>
+  </div>
+
+  <p>Goat milk contains precious skin minerals like selenium (proper muscle growth and development) and is loaded with vitamins, particularly vitamin A, the most important vitamin for the skin.</p>
+  <p>As with other milk, goat’s milk contains lactic acid, which is an alpha hydroxy acid (AHA). It assists in gently sloughing off dead skin cells and helps to hydrate and brighten the skin.</p>
+
+  <h3>Skin Natural Booster</h3>
+  <p>The vitamins and other essential fatty acids present in goat milk act as a natural complexion booster.</p>
+
+  <h3>Hydrate & Moisturize</h3>
+  <p>Goat milk is a natural moisturizer, packed with essential nutrients that deeply hydrate the skin. Regular use of goat milk soap can help maintain skin moisture levels, leaving it soft and supple.</p>
+
+  <h3>Gentle Cleansing</h3>
+  <p>This soap boasts a mild yet effective cleansing formula that delicately removes impurities, dirt, and excess oils without causing any irritation.</p>
+
+  <p class="price">Rs. 760</p>
+  <button onclick="addToCart(&quot;Goat's milk soap&quot;, 760)">Add to Cart</button>
+  <a class="whatsapp-button" href="https://wa.me/94779552234?text=Hi! I'm interested in the Goat's milk soap." target="_blank">Order via WhatsApp</a>
+</div>
+ <div class="product product-item" data-name="Goat's Milk Body Shampoo">
+      <div class="gallery">
+        <img class="main-img" src="images/goatbody.jpg" alt="Goat's Milk Body Shampoo" />
+      </div>
+
+  <p>Goat’s Milk Body Shampoo is enriched with natural goat milk extract to nourish, moisturize, and gently cleanse your skin. Suitable for all skin types, including sensitive skin.</p>
+
+  <h3>Benefits</h3>
+  <ul>
+    <li>Deeply hydrates and nourishes the skin</li>
+    <li>Gentle cleansing without stripping natural oils</li>
+    <li>Rich in vitamins A, D, and E</li>
+    <li>Helps soothe dryness and irritation</li>
+  </ul>
+
+  <h3>Instructions</h3>
+  <ol>
+    <li>Wet your body with warm water.</li>
+    <li>Apply a small amount of shampoo to your palm or bath sponge.</li>
+    <li>Massage gently onto your skin in circular motions.</li>
+    <li>Rinse thoroughly with warm water.</li>
+    <li>For best results, use daily.</li>
+  </ol>
+
+  <p class="price">Rs. 4980</p>
+  <button onclick="addToCart(&quot;Goat’s Milk Body Shampoo&quot;, 1250)">Add to Cart</button>
+  <a class="whatsapp-button" href="https://wa.me/94779552234?text=Hi! I'm interested in the Goat’s Milk Body Shampoo." target="_blank">Order via WhatsApp</a>
+</div>
+  <div class="product product-item" data-name="NIVEA Intensive Moisture Body Milk">
+      <div class="gallery">
+        <img class="main-img" src="images/lotion1.jpg" alt="NIVEA Intensive Moisture Body Milk" />
+      </div>
+
+
+  <h3>NIVEA Intensive Moisture Body Milk</h3>
+  <p>Deeply hydrates and smoothens skin for up to 48 hours. Enriched with Deep Moisture Essence, Avocado Oil, and Vitamin E to nourish dry to very dry skin.</p>
+
+  <h4>Features:</h4>
+  <ul>
+    <li>48h long-lasting moisture</li>
+    <li>5 in 1 complete care</li>
+    <li>Deep Moisture Essence with Avocado Oil & Vitamin E</li>
+    <li>Ideal for dry to very dry skin</li>
+  </ul>
+
+  <p class="price">Rs. 3620</p>
+  <button onclick="addToCart(&quot;Nivea intensive moisture body milkt;, 3620)">Add to Cart</button>
+  <a class="whatsapp-button" href="https://wa.me/94779552234?text=Hi! I'm interested in the Nivea intensive moisture body milk." target="_blank">Order via WhatsApp</a>
+</div>
+
+  <div class="product product-item" data-name="Goat's Milk Body Shampoo">
+      <div class="gallery">
+        <img class="main-img" src="images/lotion2.jpg" alt="Nivea body lotion Express hydration" />
+      </div>
+  <h3>NIVEA Body Lotion Express Hydration</h3>
+  <p>Fast absorbing body lotion with Deep Moisture Essence and Sea Minerals. Provides 48h hydration for normal to dry skin without a greasy feel.</p>
+
+  <h4>Features:</h4>
+  <ul>
+    <li>48h fast absorbing moisture</li>
+    <li>5 in 1 complete care</li>
+    <li>Enriched with Sea Minerals</li>
+    <li>Lightweight, non-greasy formula</li>
+  </ul>
+
+
+  <p class="price">Rs. 3620</p>
+  <button onclick="addToCart(&quot;NIVEA Body Lotion Express Hydration;, 3620)">Add to Cart</button>
+  <a class="whatsapp-button" href="https://wa.me/94779552234?text=Hi! I'm interested in the NIVEA Body Lotion Express Hydration." target="_blank">Order via WhatsApp</a>
+</div>
+
+
+
+<div class="product product-item">
+  <div class="gallery">
+    <img class="main-img" src="images/sun.jpg" id="sun" alt="kids snusreen">
+    
+<h3>VLCC Kids Sunscreen SPF 30 PA+++</h3>
+  <p>Specially formulated for kids' delicate skin, this sunscreen offers longer-lasting sun protection against harmful UVA & UVB rays. It has a broad-spectrum, non-oily texture and leaves no white cast, making it perfect for outdoor play.</p>
+
+  <h4>Key Features:</h4>
+  <ul>
+    <li>SPF 30 with PA+++ for high sun protection</li>
+    <li>Broad-spectrum UVA & UVB protection</li>
+    <li>Non-oily texture, no white cast</li>
+    <li>Pediatrician tested and safe for kids</li>
+    <li>Longer-lasting protection</li>
+  </ul>
+
+  <h4>How to Use:</h4>
+  <ol>
+    <li>Apply generously on exposed skin areas 15 minutes before sun exposure.</li>
+    <li>Reapply every 2-3 hours, especially after swimming or sweating.</li>
+    <li>Suitable for daily outdoor activities.</li>
+  </ol>
+  <p class="price">Rs. 2680</p>
+  <button onclick="addToCart(&quot;VLCC Kids Sunscreen;, 2680)">Add to Cart</button>
+  <a class="whatsapp-button" href="https://wa.me/94779552234?text=Hi! I'm interested in the VLCC Kids Sunscreen." target="_blank">Order via WhatsApp</a>
+</div>
+
+</div>
+<div class="product product-item">
+  <div class="gallery">
+    <img class="main-img" src="images/safi.jpg" id="sun" alt="kids snusreen">
+
+
+
+  <h3>Safi Perfect White 3X Brightening Toner</h3>
+  <p>A new and improved formula designed to combat dark spots, smoothen skin, and brighten your complexion. Enriched with powerful brightening and skin-repairing ingredients, this toner helps you achieve a more even, radiant skin tone.</p>
+
+  <h4>Key Ingredients & Benefits:</h4>
+  <ul>
+    <li><strong>100X Vitamin C*</strong> – From Kakadu Plum, offering potent antioxidant protection and brightening benefits.</li>
+    <li><strong>Niacinamide</strong> – Reduces dark spots and improves skin texture.</li>
+    <li><strong>0.5% Glycolic Acid</strong> – Gently exfoliates and smooths skin.</li>
+  </ul>
+  <p><small>*When compared to an orange.</small></p>
+
+  <h4>How to Use:</h4>
+  <ol>
+    <li>After cleansing, pour a small amount onto a cotton pad or palm.</li>
+    <li>Gently apply to face and neck, avoiding the eye area.</li>
+    <li>Follow with your serum and moisturizer.</li>
+    <li>Use daily, morning and night.</li>
+  </ol>
+  <p class="price">Rs. 3620</p>
+  <button onclick="addToCart(&quot;Nivea intensive moisture body milkt;, 3620)">Add to Cart</button>
+  <a class="whatsapp-button" href="https://wa.me/94779552234?text=Hi! I'm interested in the Nivea intensive moisture body milk." target="_blank">Order via WhatsApp</a>
+</div>
+
+  
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Little Buds Imports | Akurana, Kandy, Sri Lanka</p>
+  </footer>
+
+  <script>
+    function addToCart(name, price) {
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+      cart.push({ name: name, price: price });
+      localStorage.setItem('cart', JSON.stringify(cart));
+      updateCartCount();
+      alert(name + " has been added to your cart.");
+    }
+
+    function updateCartCount() {
+      const cart = JSON.parse(localStorage.getItem('cart')) || [];
+      document.getElementById('cart-count').textContent = cart.length;
+    }
+
+    function filterProducts() {
+      const input = document.getElementById("searchInput").value.toLowerCase().trim();
+      const products = document.querySelectorAll(".product-item");
+      products.forEach(product => {
+        product.style.display = product.textContent.toLowerCase().includes(input) ? "block" : "none";
+      });
+    }
+
+    updateCartCount(); // On page load
+  </script>
+
+</body>
+</html>

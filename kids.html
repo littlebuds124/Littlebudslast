@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kids Accessories | Little Buds Japan Imports</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7cce2;
+      margin: 0;
+      padding: 0;
+    }
+
+   .product-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+    }
+    .product {
+      border: 1px solid #ddd;
+      padding: 15px;
+      max-width: 250px;
+      text-align: center; my
+      background:  #f4f4f4;
+      border-radius: 8px;
+    }
+    .gallery img {
+      width: 100%;
+      height: auto;
+      border-radius: 5px;}
+    .thumbs img {
+      width: 70px;
+      margin: 5px;
+      cursor: pointer;
+      border: 2px solid transparent;
+      border-radius: 4px;
+    }
+
+    .thumbs img:hover {
+      border-color: #999;
+    }
+
+    .price {
+      font-weight: bold;
+      color: #c2185b;
+      font-size: 1.2em;
+      margin: 10px 0;
+    }
+button {
+      padding: 10px 15px;
+      background-color: #ff4081;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .whatsapp-button {
+      display: inline-block;
+      margin-top: 10px;
+      background-color: #25D366;
+      color: white;
+      padding: 10px 15px;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+
+
+
+
+    
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
+      background:  #f7cce2;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    }
+
+    .logo img {
+      height: 50px;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #333;
+    }
+
+    .cart-icon {
+      position: fixed;
+      top: 15px;
+      right: 15px;
+      z-index: 1000;
+    }
+
+    .cart-icon img {
+      width: 40px;
+      height: 40px;
+    }
+
+    #cart-count {
+      position: absolute;
+      top: -5px;
+      right: -5px;
+      background: red;
+      color: white;
+      font-size: 12px;
+      border-radius: 50%;
+      padding: 2px 6px;
+    }
+
+    .search-bar {
+      text-align: center;
+      margin: 20px auto 10px;
+    }
+
+    #searchInput {
+      padding: 10px;
+      width: 90%;
+      max-width: 400px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #f3f3f3;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Cart Icon -->
+  <a href="cart.html" class="cart-icon">
+    <img src="images/cart-icon.png" alt="Cart">
+    <span id="cart-count">0</span>
+  </a>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <a href="index.html"><img src="images/logo.png" alt="Little Buds Logo"></a>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="delivery.html">Delivery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Search Bar -->
+  <div class="search-bar">
+    <input type="text" id="searchInput" placeholder="Search kids accessories..." oninput="filterProducts()" />
+  </div>
+
+  <main>
+    <h2 style="text-align:center; margin-top:10px;">Kids Accessories</h2>
+    <div class="product-grid">
+
+      <!-- Example Product -->
+      <div class="product product-item">
+  <div class="gallery">
+    <img class="main-img" src="images/box.jpg" id="box" alt="Cute Fruit-shaped Kids Lunch Boxes" />
+    <div class="thumbs">
+      <img onclick="document.getElementById('box').src='images/box.jpg'" src="images/box.jpg" />
+      <img onclick="document.getElementById('box').src='images/box2.jpg'" src="images/box2.jpg" />
+      <img onclick="document.getElementById('box').src='images/box5.jpg'" src="images/box5.jpg" />
+      <img onclick="document.getElementById('box').src='images/box6.jpg'" src="images/box6.jpg" />
+      <img onclick="document.getElementById('box').src='images/box7.jpg'" src="images/box7.jpg" />
+      <img onclick="document.getElementById('box').src='images/box8.jpg'" src="images/box8.jpg" />
+    </div>
+  </div>
+
+  <div class="product-details">
+    <h3>Cute Kids Lunch Boxes</h3>
+    <p>
+      Adorable and compact bento-style lunch boxes for kids, available in 3 playful shapes:
+    </p>
+    <ul>
+      <li><strong>Watermelon Slice Box:</strong> Size 15.5cm x 8cm (6.10in x 3.15in)</li>
+      <li><strong>Strawberry Box:</strong> "You're the Sweetest" printed design – vibrant and cheerful</li>
+      <li><strong>Donut-Shaped Box:</strong> 18cm x 17cm x 9cm (7.08in x 6.69in x 3.54in), with cute clouds and stars</li>
+    </ul>
+<p>
+      Perfect for snacks, fruits, or lunch at school or outings. BPA-free plastic, safe and easy to carry!
+    </p>
+
+
+     <p class="price">Rs.1340</p>
+  <button onclick="addToCart('addToCart('Cute Fruit-Shaped Kids Lunch Boxes', 1340)">Add to Cart</button>
+  <a class="whatsapp-button" href="https://wa.me/94779552234?text=Hi! I'm interested in the kids Lunch boxes.">Order via WhatsApp</a>
+</div>
+</div>
+
+        
+
+      <div class="product product-item" data-name="Cute Animal Rice Mold Set">
+  <div class="gallery">
+    <img class="main-img" src="images/bread1.jpg" id="riceMoldMain" alt="Cute Animal Rice Mold Set" />
+    <div class="thumbs">
+      <img onclick="document.getElementById('riceMoldMain').src='images/bread3.jpg'" src="images/bread3.jpg" alt="Rice mold set - bunny, dolphin, flower shapes" />
+      <img onclick="document.getElementById('riceMoldMain').src='images/bread1.jpg'" src="images/bread1.jpg" alt="Shaped rice served with curry" />
+     
+    </div>
+  </div>
+  <h3>Cute Animal Rice Mold Set</h3>
+  <ul>
+    <li>Make adorable bunny, dolphin, and flower-shaped rice servings</li>
+    <li>Includes veggie cutter for creative garnishes</li>
+    <li>Perfect for kids’ lunches, curry plates, and party meals</li>
+    <li>Easy to use: fill mold with rice, press, and release</li>
+  </ul>
+  <h4>How to Use:</h4>
+  <ol>
+    <li>Cook rice and let it cool slightly for easy shaping.</li>
+    <li>Fill the mold with rice, pressing gently for a firm shape.</li>
+    <li>Release rice onto the plate by lifting the mold.</li>
+    <li>Use the included cutter to make vegetable or cheese decorations.</li>
+    <li>Serve with curry, stew, or your favorite sides.</li>
+  </ol>
+ <p class="price">Rs.840</p>
+
+  <button onclick="addToCart('Cute Animal Rice Mold Set', 840)">Add to Cart</button>
+  <a class="whatsapp-button" href="https://wa.me/94779552234?text=Hi! I'm interested in the Animal Rice Mold Set.">Order via WhatsApp</a>
+</div>
+
+
+
+<div class="product product-item" data-name="Assorted Food Picks">
+  <div class="gallery">
+    <img class="main-img" src="images/foodpic.jpg" id="food-picks-img" alt="Assorted Food Picks" />
+    <div class="thumbs">
+      <img onclick="document.getElementById('food-picks-img').src='images/foodpic1.jpg'" src="images/foodpic1.jpg" alt="Assorted Food Picks - Main" />
+      <img onclick="document.getElementById('food-picks-img').src='images/foodpic.jpg'" src="images/foodpic.jpg" alt="Assorted Food Picks - Birds" />
+      <img onclick="document.getElementById('food-picks-img').src='images/foodpic2.jpg'" src="images/foodpic2.jpg" alt="Assorted Food Picks - Animals" />
+      <img onclick="document.getElementById('food-picks-img').src='images/foodpic3.jpg'" src="images/foodpic3.jpg" alt="Assorted Food Picks - Flowers" />
+  <img onclick="document.getElementById('food-picks-img').src='images/foodpic4.jpg'" src="images/foodpic4.jpg" alt="Assorted Food Picks - Animals" />
+  <img onclick="document.getElementById('food-picks-img').src='images/food5.jpg'" src="images/food5.jpg" alt="Assorted Food Picks - Animals" />
+ <img onclick="document.getElementById('food-picks-img').src='images/food6.jpg'" src="images/food6.jpg" alt="Assorted Food Picks - Animals" />
+
+    </div>
+  </div>
+  <h3>Assorted Food Picks</h3>
+  <ul>
+    <li>Includes multiple fun shapes such as birds, animals, and flowers</li>
+    <li>Perfect for bento boxes, snacks, and party food</li>
+    <li>Reusable, lightweight, and safe for kids</li>
+    <li>Made from food-safe, BPA-free plastic</li>
+    <li>Easy to clean and store</li>
+  </ul>
+  <p class="price">Rs. 520</p>
+  <button onclick="addToCart('Assorted Food Picks', 520)">Add to Cart</button>
+  <a class="whatsapp-button" href="https://wa.me/94779552234?text=Hi! I'm interested in the Assorted Food Picks. Please send me the available shapes.">Order via WhatsApp</a>
+</div>
+
+<div class="product product-item" data-name="Bread Cutter & Sealer">
+  <div class="gallery">
+    <img class="main-img" src="images/breadcut2.jpg" id="bread-cutter-img" alt="Bread Cutter and Sealer" loading="lazy" />
+    <div class="thumbs">
+      <img onclick="document.getElementById('bread-cutter-img').src='images/breadcut3.jpg'" src="images/breadcut3.jpg" alt="Bread Cutter - Alternate View" loading="lazy" />
+      <img onclick="document.getElementById('bread-cutter-img').src='images/breadcut2.jpg'" src="images/breadcut2.jpg" alt="Bread Cutter - Shape Example" loading="lazy" />
+    </div>
+  </div>
+
+  <h3>Bread Cutter & Sealer</h3>
+  <p>Make fun, sealed sandwiches in cute shapes — perfect for kids' lunches, picnics, and creative snacks.</p>
+
+  <h4>How to Use</h4>
+  <ol class="neat-steps">
+    <li><strong>Prepare:</strong> Add filling (jam, peanut butter, tuna, cheese, egg, etc.) to one bread slice, keeping 1–2 cm from edges.</li>
+    <li><strong>Top:</strong> Place the second slice on top, aligning edges.</li>
+    <li><strong>Cut:</strong> Position cutter in the center and press firmly.</li>
+    <li><strong>Seal:</strong> If built-in, press to crimp edges; if two-piece, cut first then seal.</li>
+    <li><strong>Serve:</strong> Lift, remove, and trim crust if desired.</li>
+    <li><strong>Clean:</strong> Wash with warm soapy water and dry before storing.</li>
+  </ol>
+
+  <p class="price">Rs. 780</p>
+  <button onclick="addToCart('Bread Cutter & Sealer', 780)">Add to Cart</button>
+  <a class="whatsapp-button" href="https://wa.me/94779552234?text=Hi! I'm interested in the Bread Cutter & Sealer.">Order via WhatsApp</a>
+</div>
+
+<div class="product product-item" data-name="Dinosaur Shape Bread Cutter">
+  <div class="gallery">
+    <img class="main-img" src="images/breadcut.jpg" id="dinoBreadMain" alt="Dinosaur Shape Bread Cutter - Main" />
+    <div class="thumbs" aria-hidden="false">
+      <img onclick="document.getElementById('dinoBreadMain').src='images/breadcut1.jpg'" src="images/breadcut1.jpg" alt="Dinosaur cutter " />
+      <img onclick="document.getElementById('dinoBreadMain').src='images/breadcut4.jpg'" src="images/breadcut4.jpg" alt="Dinosaur cutter - example 2" />
+      <img onclick="document.getElementById('dinoBreadMain').src='images/breadcut.jpg'" src="images/breadcut.jpg" alt="Dinosaur cutter - finished sandwich" />
+    </div>
+  </div>
+
+  <h3>Dinosaur Shape Bread Cutter — 1pc</h3>
+
+  <p>
+    Create cute dinosaur-shaped sandwiches and sealed treats with this easy-to-use bread cutter & mold.
+    Perfect for classrooms, parties, bento boxes, holidays (Halloween / Christmas / Independence Day) or everyday lunches.
+  </p>
+
+  <ul style="text-align:left; padding-left:18px;">
+    <li>🎁 <strong>1pc</strong> — Dinosaur-shaped sandwich cutter/mold</li>
+    <li>🍞 Cuts & seals sandwich crusts into fun dinosaur shapes</li>
+    <li>🏫 Great for school lunches, classroom activities & party snacks</li>
+    <li>🎉 Ideal gift: birthdays, holidays, or stocking stuffers</li>
+    <li>✅ Easy to use: press to cut; some designs also crimp edges to seal</li>
+    <li>🧼 Clean-up: hand wash with warm soapy water (check packaging for dishwasher info)</li>
+  </ul>
+
+ <p class="price">Rs.520</p>
+
+  <button onclick="addToCart('Cute Animal Rice Mold Set', 520)">Add to Cart</button>
+  <a class="whatsapp-button" href="https://wa.me/94779552234?text=Hi! I'm interested in the dinauser bread cutter.">Order via WhatsApp</a>
+</div>
+
+  
+
+
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Little Buds Japan Imports | Akurana, Kandy, Sri Lanka</p>
+  </footer>
+
+  <script>
+    function addToCart(name, price) {
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+      cart.push({ name: name, price: price });
+      localStorage.setItem('cart', JSON.stringify(cart));
+      updateCartCount();
+      alert(name + " has been added to your cart.");
+    }
+
+    function updateCartCount() {
+      const cart = JSON.parse(localStorage.getItem('cart')) || [];
+      document.getElementById('cart-count').textContent = cart.length;
+    }
+
+    function filterProducts() {
+      const input = document.getElementById("searchInput").value.toLowerCase();
+      const products = document.querySelectorAll(".product-item");
+      products.forEach(product => {
+        product.style.display = product.textContent.toLowerCase().includes(input) ? "block" : "none";
+      });
+    }
+
+    updateCartCount(); // Initialize cart count
+  </script>
+
+</body>
+</html>

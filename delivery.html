@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Delivery Booking | Little Buds Japan Imports</title>
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    function sendDeliveryInfo() {
+      const name = document.getElementById('name').value.trim();
+
+const address = document.getElementById('address').value.trim();
+      const date = document.getElementById('date').value;
+      const notes = document.getElementById('notes').value.trim();
+
+      if (!name || !address || !date) {
+        alert("Please fill in all required fields.");
+        return;
+      }
+
+      const message = `Hi! I'd like to book a delivery.%0A%0A*Name:* ${name}%0A*Address:* ${address}%0A*Preferred Date:* ${date}%0A*Notes:* ${notes}`;
+      const whatsappURL = `https://wa.me/94779552234?text=${encodeURIComponent(message)}`;
+      window.open(whatsappURL, '_blank');
+    }
+  </script>
+</head>
+<script>
+  function sendDeliveryInfo() {
+    const name = document.getElementById('name').value.trim();
+    const address = document.getElementById('address').value.trim();
+    const date = document.getElementById('date').value;
+    const notes = document.getElementById('notes').value.trim();
+
+    if (!name || !address || !date) {
+      alert("Please fill in all required fields.");
+      return;
+    }
+
+    const message = `Hi! I'd like to book a delivery.%0A%0A*Name:* ${name}%0A*Address:* ${address}%0A*Preferred Date:* ${date}%0A*Notes:* ${notes}`;
+    const whatsappURL = `https://wa.me/94779552234?text=${message}`;
+
+    // Use location.href instead of window.open
+    window.location.href = whatsappURL;
+  }
+</script>
+<body>
+  <header>
+     <div class="logo" style="margin-left: -15px;">
+      <a href="index.html">
+        <img src="images/logo.png" alt="Little Buds Logo" />
+      </a>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="delivery.html">Delivery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+<li style="margin-left: 5px; display: flex; align-items: center;">
+  <a href="cart.html">
+    <img src="images/cart-icon.png" alt="Cart" style="width: 25px; vertical-align: middle;" />
+  </a>
+</li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="form-section">
+    <h2>Book a Delivery</h2>
+    <form onsubmit="event.preventDefault(); sendDeliveryInfo();">
+      <label for="name">Your Name *</label>
+      <input type="text" id="name" placeholder="Full Name" required>
+
+      <label for="address">Delivery Address *</label>
+      <textarea id="address" placeholder="Enter your full address" required></textarea>
+
+      <label for="date">Preferred Delivery Date *</label>
+
+      <input type="date" id="date" required>
+      <label for="notes">Additional Notes</label>
+      <textarea id="notes" placeholder="e.g. call before delivery, landmark, etc."></textarea>
+
+      <button type="submit">Send via WhatsApp</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Little Buds Japan Imports | Akurana, Kandy, Sri Lanka</p>
+  </footer>
+</body>
+</html> 
+<link rel="stylesheet" href="styles.css">

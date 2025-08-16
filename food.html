@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Japanese Food Items | Little Buds Japan Imports</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7cce2;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
+      background: #f7cce2;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    }
+
+    .logo img {
+      height: 50px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #333;
+    }
+
+    .cart-icon {
+      position: fixed;
+      top: 15px;
+      right: 15px;
+      z-index: 1000;
+    }
+
+    .cart-icon img {
+      width: 40px;
+      height: 40px;
+    }
+
+    #cart-count {
+      position: absolute;
+      top: -5px;
+      right: -5px;
+      background: red;
+      color: white;
+      font-size: 12px;
+      border-radius: 50%;
+      padding: 2px 6px;
+    }
+
+    .search-bar {
+      text-align: center;
+      margin: 20px auto 10px;
+    }
+
+    #searchInput {
+      padding: 10px;
+      width: 90%;
+      max-width: 400px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    main h2 {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .product-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .product {
+      border: 1px solid #ddd;
+      padding: 15px;
+      max-width: 250px;
+      background: #f4f4f4;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
+
+    .price {
+      font-weight: bold;
+      color: #c2185b;
+      font-size: 1.2em;
+      margin: 10px 0;
+    }
+
+    button {
+      padding: 10px 15px;
+      background-color: #ff4081;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .whatsapp-button {
+      display: inline-block;
+      margin-top: 10px;
+      background-color: #25D366;
+      color: white;
+      padding: 10px 15px;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #f3f3f3;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Cart Icon -->
+  <a href="cart.html" class="cart-icon">
+    <img src="images/cart-icon.png" alt="Cart" />
+    <span id="cart-count">0</span>
+  </a>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <a href="index.html"><img src="images/logo.png" alt="Little Buds Logo" /></a>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="delivery.html">Delivery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Search Bar -->
+  <div class="search-bar">
+    <input type="text" id="searchInput" placeholder="Search food items..." oninput="filterProducts()" />
+  </div>
+
+  <main>
+    <h2>Japanese Imported Food</h2>
+
+    <div class="product-grid">
+
+      <!-- Product 1: Mayonnaise -->
+      <div class="product product-item">
+        <div class="gallery">
+          <img src="images/mayonnaise.jpg" alt="GS Japanese Mayonnaise" />
+        </div>
+        <div class="product-description">
+          <h2>🇯🇵 GS Japanese Mayonnaise – 1kg</h2>
+          <p><strong>Authentic Japanese Flavor!</strong></p>
+          <ul>
+            <li>🍳 Rich & Creamy Texture</li>
+            <li>🍋 Slightly Sweet & Tangy Flavor</li>
+            <li>🥚 Made with Egg Yolks</li>
+            <li>🧂 No Artificial Preservatives</li>
+            <li>🇯🇵 Imported from Japan</li>
+          </ul>
+          <p><strong>Size:</strong> 1kg | <strong>Storage:</strong> Refrigerate after opening.</p>
+          <p class="price">Rs. 2940</p>
+          <button onclick="addToCart('GS Japanese Mayonnaise – 1kg', 2940)">Add to Cart</button>
+          <a class="whatsapp-button" href="https://wa.me/94779552234?text=Hi! I'm interested in the GS Japanese Mayonnaise – 1kg.">Order via WhatsApp</a>
+        </div>
+      </div>
+
+      <!-- Product 2: Peanut Butter -->
+      <div class="product product-item">
+        <div class="gallery">
+          <img src="images/peanutbutter.jpg" alt="Peanut Butter" />
+        </div>
+        <div class="product-description">
+          <h2>🥜 Crunchy Peanut Butter – 340g</h2>
+          <p><strong>Rich and Roasted with Real Peanut Pieces</strong></p>
+          <ul>
+            <li>Net Weight: 340g</li>
+            <li>Imported from Japan</li>
+            <li>Great for sandwiches, smoothies & baking</li>
+          </ul>
+          <p class="price">Rs. 1720</p>
+          <button onclick="addToCart('Crunchy Peanut Butter – 340g', 1720)">Add to Cart</button>
+          <a class="whatsapp-button" href="https://wa.me/94779552234?text=Hi! I'm interested in the Crunchy Peanut Butter – 340g.">Order via WhatsApp</a>
+        </div>
+      </div>
+
+      <!-- Product 3: Hot Cake Mix -->
+      <div class="product product-item">
+        <div class="gallery">
+          <img src="images/pancake.jpg" alt="Pancake Mix" />
+        </div>
+        <div class="product-description">
+          <h2>🥞 Hot Cake Mix – Fluffy Pancakes</h2>
+          <ul>
+            <li>Vanilla scented</li>
+            <li>Easy to prepare for pancakes or donuts</li>
+            <li>Microwave or pan-cook options</li>
+          </ul>
+          <p class="price">730</p>
+          <button onclick="addToCart('Hot Cake Mix – Fluffy Pancakes', 730)">Add to Cart</button>
+          <a class="whatsapp-button" href="https://wa.me/94779552234?text=Hi! I'm interested in the Hot Cake Mix – Fluffy Pancakes.">Order via WhatsApp</a>
+        </div>
+      </div>
+
+      <!-- Product 4: Japanese Salad Dressings -->
+      <div class="product product-item">
+        <div class="gallery">
+          <img src="images/salad.jpg" alt="Japanese Salad Dressing" />
+        </div>
+        <div class="product-description">
+          <h2>🥗 Japanese Salad Dressings – Assorted</h2>
+          <ul>
+            <li>Flavors: Broccoli, Avocado, Yuzu, Sesame & more</li>
+            <li>Great for salads, dips, or marinades</li>
+            <li>Imported from Japan (approx. 180ml)</li>
+          </ul>
+          <p class="price">Rs. 970</p>
+          <button onclick="addToCart('Japanese Salad Dressings – Assorted', 970)">Add to Cart</button>
+          <a class="whatsapp-button" href="https://wa.me/94779552234?text=Hi! I'm interested in the Japanese Salad Dressings – Assorted.">Order via WhatsApp</a>
+        </div>
+      </div>
+
+<!-- Nutkao Product -->
+<div class="product product-item">
+  <div class="gallery">
+    <img class="main-img" src="images/nut.jpg" id="food-nutkao" alt="Nutkao Hazelnut Chocolate Spread" />
+  </div>
+
+  <div class="product-description">
+    <h2>🍫 Nutkao Hazelnut Chocolate Spread – 400g</h2>
+    <p><strong>Irresistible Creamy Delight – Imported from Japan 🇯🇵</strong></p>
+    <p>
+      Treat yourself to the rich, smooth, and nutty flavor of <strong>Nutkao Hazelnut Chocolate Spread</strong>, a premium-quality spread made with real hazelnuts and cocoa.
+      Perfect for toast, pancakes, baking, or simply enjoying by the spoonful!
+    </p>
+
+    <ul>
+      <li>🥄 <strong>Velvety Texture</strong> – Easy to spread</li>
+      <li>🌰 <strong>Made with Real Hazelnuts & Cocoa</strong></li>
+      <li>🍫 <strong>Sweet & Chocolatey</strong> – Loved by all ages</li>
+      <li>🇯🇵 <strong>Imported from Japan</strong> – Authentic quality & packaging</li>
+      <li>🧁 <strong>Great for baking, snacks & desserts</strong></li>
+    </ul>
+
+    <p>
+      <strong>Net Weight:</strong> 400g<br>
+      <strong>Storage:</strong> Store in a cool, dry place. Refrigerate after opening.<br>
+      <strong>Shelf Life:</strong> See label for expiry.
+    </p>
+
+    <p class="price">Rs. 2180</p>
+    <button onclick="addToCart('Nutkao Hazelnut Chocolate Spread – 400g', 2180)">Add to Cart</button>
+    <a class="whatsapp-button" href="https://wa.me/94779552234?text=Hi! I'm interested in the Nutkao Hazelnut Chocolate Spread – 400g.">Order via WhatsApp</a>
+  </div>
+</div>
+
+<!-- Sugar-Free Milk Candy Product -->
+<div class="product product-item">
+  <div class="gallery">
+    <img class="main-img" src="images/candy.jpg" id="food-sugarfree-milk" alt="LOTTE ZERO Sugar-Free Milk Candy" />
+  </div>
+
+  <div class="product-description">
+    <h2>🍬 LOTTE ZERO Sugar-Free Milk Candy</h2>
+    <p><strong>Brand:</strong> LOTTE</p>
+    <p><strong>Type:</strong> Sugar-Free Milk Candy</p>
+    <p><strong>Flavor:</strong> Rich & Creamy Milk</p>
+    <p><strong>Features:</strong></p>
+    <ul>
+      <li>🚫 Zero Sugar</li>
+      <li>🚫 Zero Saccharides</li>
+      <li>🥛 Rich and deep milk flavor</li>
+      <li>🍬 Delicious creamy texture</li>
+    </ul>
+    <p>
+      This guilt-free treat from Japan is perfect for those watching their sugar intake but still want a sweet, milky indulgence. 
+      Enjoy the smooth and satisfying flavor of real milk in every bite – without the sugar!
+    </p>
+
+    <p><strong>Net Weight:</strong> approx. 40g</p>
+    <p><strong>Best Before:</strong> See back label</p>
+
+    <p class="price">Rs. 840</p>
+    <button onclick="addToCart('LOTTE ZERO Sugar-Free Milk Candy', 840)">Add to Cart</button>
+    <a class="whatsapp-button" href="https://wa.me/94779552234?text=Hi! I'm interested in the LOTTE ZERO Sugar-Free Milk Candy.">Order via WhatsApp</a>
+  </div>
+</div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Little Buds Japan Imports | Akurana, Kandy, Sri Lanka</p>
+  </footer>
+
+  <script>
+    function addToCart(name, price) {
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+      cart.push({ name: name, price: price });
+      localStorage.setItem('cart', JSON.stringify(cart));
+      updateCartCount();
+      alert(name + " has been added to your cart.");
+    }
+
+    function updateCartCount() {
+      const cart = JSON.parse(localStorage.getItem('cart')) || [];
+      document.getElementById('cart-count').textContent = cart.length;
+    }
+
+    function filterProducts() {
+      const input = document.getElementById("searchInput").value.toLowerCase();
+      const products = document.querySelectorAll(".product-item");
+      products.forEach(product => {
+        product.style.display = product.textContent.toLowerCase().includes(input) ? "block" : "none";
+      });
+    }
+
+    updateCartCount();
+  </script>
+
+</body>
+</html>

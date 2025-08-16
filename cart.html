@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Your Cart | Little Buds Japan Imports</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fafafa;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: 40px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 24px;
+      color: #333;
+    }
+
+    .cart-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 10px;
+      border-bottom: 1px solid #eee;
+    }
+
+    .cart-item span {
+      flex: 1;
+      font-size: 16px;
+      color: #444;
+    }
+
+    .cart-item .remove-btn {
+      background-color: #e53935;
+      color: white;
+      border: none;
+      padding: 6px 12px;
+      font-size: 14px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .total {
+      text-align: right;
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+      color: #111;
+    }
+
+
+footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: #777;
+      background-color: #f1f1f1;
+      margin-top: 50px;
+    }
+
+    @media (max-width: 600px) {
+      .cart-item {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .cart-item span, .remove-btn {
+        margin-top: 8px;
+      }
+
+      .total {
+        text-align: left;
+      }
+
+      .whatsapp-btn {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <a href="index.html">
+        <img src="images/logo.png" alt="Little Buds Japan Imports Logo" />
+      </a>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="delivery.html">Delivery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <div class="container">
+    <h2>Your Shopping Cart</h2>
+    <div id="cart-container"></div>
+    <div class="total" id="total-price"></div>
+    <a class="whatsapp-btn" href="#" id="send-whatsapp" target="_blank">Send to WhatsApp</a>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Little Buds Japan Imports | Akurana, Kandy, Sri Lanka</p>
+  </footer>
+
+  <script>
+    function loadCart() {
+      const cart = JSON.parse(localStorage.getItem('cart')) || [];
+      const container = document.getElementById('cart-container');
+      const totalDiv = document.getElementById('total-price');
+      const whatsappBtn = document.getElementById('send-whatsapp');
+
+      container.innerHTML = '';
+      let total = 0;
+
+      cart.forEach((item, index) => {
+        total += item.price;
+        const div = document.createElement('div');
+        div.className = 'cart-item';
+        div.innerHTML = `
+          <span>${item.name}</span>
+          <span>Rs. ${item.price.toLocaleString()}</span>
+          <button class="remove-btn" onclick="removeItem(${index})">Remove</button>
+        `;
+        container.appendChild(div);
+      });
+
+      totalDiv.textContent = cart.length ? `Total: Rs. ${total.toLocaleString()}` : 'Your cart is empty.';
+
+      if (cart.length) {
+        let message = "Hi! I'd like to order the following items from Little Buds:%0A%0A";
+        cart.forEach(item => {
+          message += `• ${item.name} - Rs. ${item.price.toLocaleString()}%0A`;
+        });
+        message += `%0ATotal: Rs. ${total.toLocaleString()}`;
+        whatsappBtn.href = "https://wa.me/94779552234?text=" + message;
+        whatsappBtn.style.display = "block";
+      } else {
+        whatsappBtn.style.display = "none";
+      }
+    }
+
+    function removeItem(index) {
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+      cart.splice(index, 1);
+      localStorage.setItem('cart', JSON.stringify(cart));
+      loadCart();
+    }
+
+    loadCart();
+console.log("Cart contents:", cart);
+  </script>
+
+</body>
+</html>

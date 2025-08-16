@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Little Buds Japan Imports</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+      overflow-x: hidden;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+      background-color:#f4f4f4;
+    }
+
+    .logo img {
+      height: 60px;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      gap: 40px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+    /* Hero Section */
+    .hero {
+      position: relative;
+      width: 100%;
+      height: 300px;
+    }
+
+    .hero-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: 1;
+    }
+
+    .hero-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+      text-align: center;
+      color: white;
+      padding: 0 15px;
+    }
+
+    .hero-text h1 {
+      font-size: 2.5em;
+      margin: 0 0 10px;
+    }
+
+    .hero-text p {
+      font-size: 1.2em;
+      margin: 0;
+    }
+
+    /* Welcome Section */
+    .welcome-section {
+      text-align: center;
+      padding: 40px 20px;
+      background: #ffffff;
+    }
+
+    .welcome-section h2 {
+      margin-bottom: 10px;
+    }
+
+    .welcome-section p {
+      max-width: 600px;
+      margin: 0 auto 20px;
+    }
+
+    .welcome-section a {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background: #0077cc;
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #f4f4f4;
+      font-size: 14px;
+      color: #555;
+    }
+
+    /* Responsive Design (but keep nav horizontal) */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      nav ul {
+        flex-direction: row; /* stay horizontal */
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+    <div class="logo">
+      <a href="index.html"><img src="images/logo.png" alt="Logo" /></a>
+    </div>
+  </div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="delivery.html">Delivery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- Hero Section -->
+<section class="hero">
+  <img src="images/hero-family.png" alt="Happy Family with Shopping Cart" class="hero-image" />
+  <div class="hero-overlay"></div>
+  <div class="hero-text">
+    <h1>Explore Our Imported Products</h1>
+    <p>Imported toys, dresses, accessories & more</p>
+  </div>
+</section>
+
+<!-- Welcome Section -->
+<section class="welcome-section">
+  <h2>Welcome to Little Buds Imports</h2>
+  <p>Browse through unique Japanese items curated just for you — from educational toys and elegant dresses to tasty treats and daily-use accessories.</p>
+  <a href="shop.html">Start Shopping</a>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p>&copy; 2025 Little Buds Japan Imports | Akurana, Kandy, Sri Lanka</p>
+  <p>Website developed by <strong>Little Buds Web Team</strong></p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Japanese Food Items | Little Buds Japan Imports</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7cce2;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
+      background: #f7cce2;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    }
+
+    .logo img {
+      height: 50px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #333;
+    }
+
+    .cart-icon {
+      position: fixed;
+      top: 15px;
+      right: 15px;
+      z-index: 1000;
+    }
+
+    .cart-icon img {
+      width: 40px;
+      height: 40px;
+    }
+
+    #cart-count {
+      position: absolute;
+      top: -5px;
+      right: -5px;
+      background: red;
+      color: white;
+      font-size: 12px;
+      border-radius: 50%;
+      padding: 2px 6px;
+    }
+
+    .search-bar {
+      text-align: center;
+      margin: 20px auto 10px;
+    }
+
+    #searchInput {
+      padding: 10px;
+      width: 90%;
+      max-width: 400px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    main h2 {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .product-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .product {
+      border: 1px solid #ddd;
+      padding: 15px;
+      max-width: 250px;
+      background: #f4f4f4;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: auto;
+      border-radius: 30px;
+    }
+
+    .price {
+      font-weight: bold;
+      color: #c2185b;
+      font-size: 1.2em;
+      margin: 5px 0;
+    }
+
+    button {
+      padding: 10px 15px;
+      background-color: #ff4081;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .whatsapp-button {
+      display: inline-block;
+      margin-top: 10px;
+      background-color: #25D366;
+      color: white;
+      padding: 10px 15px;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #f3f3f3;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Cart Icon -->
+  <a href="cart.html" class="cart-icon">
+    <img src="images/cart-icon.png" alt="Cart" />
+    <span id="cart-count">0</span>
+  </a>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <a href="index.html"><img src="images/logo.png" alt="Little Buds Logo" /></a>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="delivery.html">Delivery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Search Bar -->
+  <div class="search-bar">
+    <input type="text" id="searchInput" placeholder="Search food items..." oninput="filterProducts()" />
+  </div>
+
+ <main>
+    <h2>Teaching,Learning Materials</h2>
+
+    <div class="product-grid">
+
+<div class="product product-item" data-name="Dry Erase Multiplication & Division Chart Whiteboard">
+  <div class="gallery">
+    <!-- Replace image paths with your files -->
+    <img class="main-img" src="images/maths.jpg" id="math-board-img" alt="Dry Erase Multiplication & Division Chart Whiteboard">
+    <div class="thumbs">
+      <img onclick="document.getElementById('math-board-img').src='images/maths1.jpg'" src="images/maths1.jpg" alt="Front: Multiplication table">
+      <img onclick="document.getElementById('math-board-img').src='images/maths3.jpg'" src="images/maths3.jpg" alt="Back: Division chart">
+      <img onclick="document.getElementById('math-board-img').src='images/maths.jpg'" src="images/maths.jpg" alt="Included dry-erase marker">
+      <img onclick="document.getElementById('math-board-img').src='images/maths4.jpg'" src="images/maths4.jpg" alt="Marker with eraser cap">
+    </div>
+  </div>
+
+  <h3>Dry Erase Multiplication &amp; Division Chart Whiteboard</h3>
+  <p>
+    Double-sided, colorful math board that makes learning times tables and division facts quick and fun.
+    Perfect for classrooms, homework practice, and revision at home.
+  </p>
+
+  <h4>Features</h4>
+  <ul>
+    <li><strong>Double-Sided:</strong> Multiplication table on one side, division chart on the other.</li>
+    <li><strong>Dry-Erase Surface:</strong> Write, wipe, and reuse—great for daily drills.</li>
+    <li><strong>Color-Coded Layout:</strong> Helps students spot patterns and memorize faster.</li>
+    <li><strong>Large Writing Area:</strong> Easy to read from a distance; ideal for desks or small group work.</li>
+    <li><strong>Durable Paper-Board Construction:</strong> Lightweight yet sturdy with protective lamination.</li>
+    <li><strong>Includes Marker:</strong> Comes with a fine-tip dry-erase pen (with eraser cap).</li>
+  </ul>
+
+  <p class="price">Rs. 1,980</p>
+  <button onclick="addToCart('Dry Erase Multiplication & Division Chart Whiteboard', 1980)">Add to Cart</button>
+  <a class="whatsapp-button" href="https://wa.me/94779552234?text=Hi!%20I%27m%20interested%20in%20the%20Dry%20Erase%20Multiplication%20%26%20Division%20Chart%20Whiteboard." target="_blank">Order via WhatsApp</a>
+</div>
+  <div class="product product-item" data-name="Early Learners CVC Word Building Busy Book">
+  <div class="gallery">
+    <img class="main-img" src="images/cvc-busybook.jpg" id="cvc-busybook-img" alt="Early Learners CVC Word Building Busy Book - Educational Puzzle Game">
+    <div class="thumbs">
+      <img onclick="document.getElementById('cvc-busybook-img').src='images/cvc-busybook.jpg'" src="images/cvc-busybook.jpg" alt="Front cover of CVC Word Building Busy Book">
+      <img onclick="document.getElementById('cvc-busybook-img').src='images/cvc-busybook1.jpg'" src="images/cvc-busybook1.jpg" alt="Inside pages of Busy Book with alphabet puzzles">
+      <img onclick="document.getElementById('cvc-busybook-img').src='images/cvc-busybook2.jpg'" src="images/cvc-busybook2.jpg" alt="Children playing with CVC Busy Book">
+    </div>
+  </div>
+
+  <h3>Early Learners CVC Word Building Busy Book</h3>
+  <p>
+    Spark a love for reading and spelling with this <strong>interactive CVC Word Building Busy Book</strong>.  
+    Designed for children ages <strong>3–6 years</strong>, it combines fun puzzles with phonics practice, helping kids develop spelling, vocabulary, and handwriting skills while enjoying a <strong>quiet, screen-free activity</strong>.
+  </p>
+
+  <h4>✨ Features</h4>
+  <ul>
+    <li>Includes <strong>alphabet puzzles</strong> for building CVC (Consonant-Vowel-Consonant) words.</li>
+    <li>Encourages <strong>phonics, spelling, and early reading</strong> development.</li>
+    <li>Made with <strong>sturdy paper material</strong> suitable for handwriting practice.</li>
+    <li>Reusable, interactive pages keep kids engaged in <strong>quiet play</strong>.</li>
+    <li>Compact and travel-friendly — ideal for learning on the go.</li>
+  </ul>
+
+  <h4>🎯 Learning Benefits</h4>
+  <p>
+    Builds early literacy, strengthens vocabulary, and promotes independent problem-solving.  
+    Perfect for preschool, kindergarten, homeschooling, or as a thoughtful <strong>holiday gift</strong>.
+  </p>
+ <p class="price">Rs.1760</p>
+  <button onclick="addToCart('Early Learners CVC Word Building Busy Book, 1760)">Add to Cart</button>
+  <a class="whatsapp-button" href="https://wa.me/94779552234?text=Hi! I'm interested in the Early Learners CVC Word Building Busy Book">Order via WhatsApp</a>
+</div>
+
+
+
+
+<div class="product product-item" data-name="Anatomy Busy Book">
+  <div class="gallery">
+    <img class="main-img" src="images/anatomy.jpg" id="anatomy-busy-book-img" alt="Anatomy Busy Book - Interactive Human Body Learning Activity">
+    <div class="thumbs">
+      <img onclick="document.getElementById('anatomy-busy-book-img').src='images/anatomy1.jpg'" src="images/anatomy1.jpg" alt="Anatomy Busy Book Cover">
+      <img onclick="document.getElementById('anatomy-busy-book-img').src='images/anatomy3.jpg'" src="images/anatomy3.jpg" alt="Inside Pages of Anatomy Busy Book">
+
+  <img onclick="document.getElementById('anatomy-busy-book-img').src='images/anatomy4.jpg'" src="images/anatomy4.jpg" alt="Inside Pages of Anatomy Busy Book">
+
+ <img onclick="document.getElementById('anatomy-busy-book-img').src='images/anatomy.jpg'" src="images/anatomy.jpg" alt="Inside Pages of Anatomy Busy Book">
+
+
+    </div>
+  </div>
+
+  <h3>Anatomy Busy Book</h3>
+  <p>
+    Interactive human body learning activity book packed with colorful illustrations, labeled organs, and over 500 fascinating facts.  
+    A fun, hands-on way for kids and students to explore anatomy, understand body functions, and learn through play.
+  </p>
+
+  <h4>Features</h4>
+  <ul>
+    <li>Includes detailed illustrations of the human body with labeled organs.</li>
+    <li>Contains over 500 easy-to-read anatomy facts for all ages.</li>
+    <li>Interactive activities that engage visual and tactile learners.</li>
+    <li>Durable, travel-friendly design — perfect for classrooms and on-the-go learning.</li>
+    <li>Encourages curiosity, science learning, and memory skills.</li>
+  </ul>
+
+  <h4>Suggested Age</h4>
+  <p>For ages 4+ — ideal for young learners, students, and curious minds.</p>
+
+  <p class="price">Rs.2140</p>
+  <div class="product-buttons">
+    <button onclick="addToCart('Anatomy Busy Book', 2140)">Add to Cart</button>
+    <a class="whatsapp-button" href="https://wa.me/94779552234?text=Hi!%20I%27m%20interested%20in%20the%20Anatomy%20Busy%20Book." target="_blank">Order via WhatsApp</a>
+  </div>
+</div>
+
+
+
+
+<div class="product product-item" data-name="26 Alphabet Phonics CVC Words Learn Flash Cards">
+  <div class="gallery">
+    <!-- Product image -->
+    <img class="main-img" src="images/alphabet-flash-cards.jpg" id="flash-cards-img" alt="26 Alphabet Phonics CVC Words Learn Flash Cards">
+    <div class="thumbs">
+      <img onclick="document.getElementById('flash-cards-img').src='images/alphabet-flash-cards1.jpg'" src="images/alphabet-flash-cards1.jpg" alt="Alphabet Flash Cards front">
+      <img onclick="document.getElementById('flash-cards-img').src='images/alphabet-flash-cards2.jpg'" src="images/alphabet-flash-cards2.jpg" alt="Alphabet Flash Cards back">
+ <img onclick="document.getElementById('flash-cards-img').src='images/alphabet-flash-cards4.jpg'" src="images/alphabet-flash-cards4.jpg" alt="Alphabet Flash Cards back">
+ <img onclick="document.getElementById('flash-cards-img').src='images/alphabet-flash-cards.jpg'" src="images/alphabet-flash-cards.jpg" alt="Alphabet Flash Cards back">
+    </div>
+  </div>
+
+  <h3>26 Alphabet Phonics CVC Words Flash Cards (with Reusable Pen)</h3>
+  <p>
+    Colourful, double‑sided flash cards that teach letter sounds and CVC words.
+    Kids trace, spell and read using the included erasable pen—perfect for preschool,
+    kindergarten and early primary learning at home or in class.
+  </p>
+
+  <h4>Features</h4>
+  <ul>
+    <li><strong>26 cards (A–Z):</strong> Uppercase & lowercase with picture cues and CVC word lists.</li>
+    <li><strong>Write & wipe:</strong> Reusable surface works with the included erasable pen.</li>
+    <li><strong>Double‑sided & waterproof:</strong> Laminated film resists spills and tears.</li>
+    <li><strong>Handwriting practice:</strong> Traceable letters and words improve pencil control.</li>
+    <li><strong>Portable size:</strong> Each card is <em>13.3 × 8.8 cm</em> (5.24 × 3.46 in) — ideal for travel.</li>
+    <li><strong>Thick stock:</strong> 350g coated paper with double‑sided film for durability.</li>
+  </ul>
+
+  <h4>What’s Included</h4>
+  <ul>
+    <li>26 double‑sided alphabet phonics cards</li>
+    <li>1 reusable / erasable pen</li>
+  </ul>
+
+  <h4>How to Use</h4>
+  <ol>
+    <li>Say the letter sound and name the pictures.</li>
+    <li>Trace letters and CVC words with the erasable pen.</li>
+    <li>Read the words aloud, then wipe clean and repeat.</li>
+  </ol>
+
+  <!-- Update price as needed -->
+  <p class="price">Rs. 1,930</p>
+  <div class="product-buttons">
+    <button onclick="addToCart('Alphabet Phonics CVC Flash Cards (26 pcs)', 1930)">Add to Cart</button>
+    <a class="whatsapp-button" href="https://wa.me/94779552234?text=Hi!%20I%27m%20interested%20in%20the%2026%20Alphabet%20Phonics%20CVC%20Flash%20Cards." target="_blank">Order via WhatsApp</a>
+</div>
+</div>
+
+<div class="product product-item" data-name="CVC Words Flashcards – 60 Cards, 50 Words">
+  <div class="gallery">
+    <img class="main-img" src="images/cvc-flashcards.jpg" id="cvc-flashcards-img" alt="CVC Words Flashcards – 60 Cards, 50 Words">
+    <div class="thumbs">
+      <img onclick="document.getElementById('cvc-flashcards-img').src='images/cvc-flashcards1.jpg'" src="images/cvc-flashcards1.jpg" alt="CVC Word Flashcards front view">
+      <img onclick="document.getElementById('cvc-flashcards-img').src='images/cvc-flashcards2.jpg'" src="images/cvc-flashcards2.jpg" alt="CVC Word Flashcards activities">
+      <img onclick="document.getElementById('cvc-flashcards-img').src='images/cvc-flashcards3.jpg'" src="images/cvc-flashcards3.jpg" alt="CVC Word Flashcards with ring binder">
+ <img onclick="document.getElementById('cvc-flashcards-img').src='images/cvc-flashcards.jpg'" src="images/cvc-flashcards.jpg" alt="CVC Word Flashcards with ring binder">
+ <img onclick="document.getElementById('cvc-flashcards-img').src='images/cvc-flashcards5.jpg'" src="images/cvc-flashcards5.jpg" alt="CVC Word Flashcards with ring binder">
+
+
+
+    </div>
+  </div>
+
+  <h3>CVC Words Flashcards – 60 Cards, 50 Words</h3>
+  <p>
+    Help kids learn to read and spell with these fun and educational CVC (Consonant-Vowel-Consonant) Word Flashcards!  
+    Perfect for preschoolers, kindergarten, and early learners, these flashcards are designed to build phonics, vocabulary, and spelling skills through engaging activities.
+  </p>
+
+  <h4>✨ Features</h4>
+  <ul>
+    <li>60 reusable flashcards with wipe-clean surface.</li>
+    <li>Covers 50 CVC words with short vowel sounds (a, e, i, o, u).</li>
+    <li>Colorful illustrations to aid word recognition.</li>
+    <li>Includes tracing and fill-in-the-blank exercises.</li>
+    <li>Comes with a ring binder to keep cards organized.</li>
+    <li>Encourages hands-on learning with erasable marker use.</li>
+  </ul>
+
+  <h4>📘 Learning Benefits</h4>
+  <ul>
+    <li>Improves early reading and phonics skills.</li>
+    <li>Strengthens word formation and spelling practice.</li>
+    <li>Enhances memory and vocabulary through repetition.</li>
+    <li>Fun, interactive way to keep children engaged.</li>
+  </ul>
+  <p class="price">Rs.2140</p>
+  <button onclick="addToCart('CVC Words Flashcards – 60 Cards, 50 Words', 2140)">Add to Cart</button>
+  <a class="whatsapp-button" href="https://wa.me/94779552234?text=Hi! I'm interested in the CVC Words Flashcards – 60 Cards, 50 Words.">Order via WhatsApp</a>
+</div>
+
+<div class="product product-item" data-name="I Can Read Phonics CVC Words Flashcards">
+  <div class="gallery">
+    <img class="main-img" src="images/i-can-read.jpg" id="icanread-img" alt="I Can Read Phonics CVC Words Flashcards">
+    <div class="thumbs">
+      <img onclick="document.getElementById('icanread-img').src='images/i-can-read1.jpg'" src="images/i-can-read1.jpg" alt="I Can Read Flashcards front view">
+      <img onclick="document.getElementById('icanread-img').src='images/i-can-read2.jpg'" src="images/i-can-read2.jpg" alt="I Can Read Flashcards set of cards">
+      <img onclick="document.getElementById('icanread-img').src='images/i-can-read.jpg'" src="images/i-can-read.jpg" alt="Phonics learning flashcards">
+
+ <img onclick="document.getElementById('icanread-img').src='images/i-can-read5.jpg'" src="images/i-can-read5.jpg" alt="Phonics learning flashcards">
+ <img onclick="document.getElementById('icanread-img').src='images/i-can-read4.jpg'" src="images/i-can-read4.jpg" alt="Phonics learning flashcards">
+    </div>
+  </div>
+
+  <h3>I Can Read Phonics CVC Words Learning Flashcards</h3>
+  <p>
+    Build strong reading foundations with these <strong>Phonics CVC Word Flashcards</strong>!  
+    Designed to improve sight word recognition, spelling, and phonics through colorful illustrations and interactive practice.  
+    Perfect for preschoolers, kindergarten, and early readers.
+  </p>
+
+  <h4>📦 Product Details</h4>
+  <ul>
+    <li><strong>Quantity:</strong> 64 cards / 107 roots per set.</li>
+    <li><strong>Size:</strong> 5.35 × 3.6 inches (13.59 × 9.14 cm).</li>
+    <li><strong>Material:</strong> 360g coated paper with double-sided film.</li>
+    <li><strong>Durability:</strong> Waterproof, moisture-proof, and high-definition color printing.</li>
+  </ul>
+
+  <h4>✨ Features & Benefits</h4>
+  <ul>
+    <li>Helps children recognize, read, and spell CVC and sight words.</li>
+    <li>Engaging illustrations to support memory and word association.</li>
+    <li>Great for phonics, vocabulary, and spelling practice.</li>
+    <li>Ideal for home learning, classrooms, or homeschooling.</li>
+  </ul>
+
+<p class="price">Rs.1980</p>
+  <button onclick="addToCart('I Can Read Phonics CVC Words Learning Flashcards', 1980)">Add to Cart</button>
+  <a class="whatsapp-button" href="https://wa.me/94779552234?text=Hi! I'm interested in the I Can Read Phonics CVC Words Learning Flashcards.">Order via WhatsApp</a>
+</div>
+
+
+
+
+
+
+
+
+
+ 
+
+
+<style>
+.price {
+  font-weight: bold;
+  color: #c2185b;
+  font-size: 1.2em;
+  margin: 10px 0;
+  display: inline-block;
+  width: 90%;
+  text-align: center;
+}
+
+.product-buttons button,
+.product-buttons .whatsapp-button {
+  display: inline-block;
+  width: 100%;
+  padding: 10px 15px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.product-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+</style>
+
+
+
+    
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Little Buds Japan Imports | Akurana, Kandy, Sri Lanka</p>
+  </footer>
+
+  <script>
+    function addToCart(name, price) {
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+      cart.push({ name: name, price: price });
+      localStorage.setItem('cart', JSON.stringify(cart));
+      updateCartCount();
+      alert(name + " has been added to your cart.");
+    }
+
+    function updateCartCount() {
+      const cart = JSON.parse(localStorage.getItem('cart')) || [];
+      document.getElementById('cart-count').textContent = cart.length;
+    }
+
+    function filterProducts() {
+      const input = document.getElementById("searchInput").value.toLowerCase();
+      const products = document.querySelectorAll(".product-item");
+      products.forEach(product => {
+        product.style.display = product.textContent.toLowerCase().includes(input) ? "block" : "none";
+      });
+    }
+
+    updateCartCount();
+  </script>
+
+</body>
+</html>
+

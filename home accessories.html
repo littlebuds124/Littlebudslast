@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Home Accessories | Little Buds Japan Imports</title>
+  <link rel="stylesheet" href="styles.css" />
+ <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7cce2;
+      margin: 0;
+      padding: 0;
+    }
+
+   .product-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+    }
+    .product {
+      border: 1px solid #ddd;
+      padding: 15px;
+      max-width: 250px;
+      text-align: center; 
+      background:  #f4f4f4;
+      border-radius: 8px;
+    }
+    .gallery img {
+      width: 100%;
+      height: auto;
+      border-radius: 5px;}
+    .thumbs img {
+      width: 70px;
+      margin: 5px;
+      cursor: pointer;
+      border: 2px solid transparent;
+      border-radius: 4px;
+    }
+
+    .thumbs img:hover {
+      border-color: #999;
+    }
+
+    .price {
+      font-weight: bold;
+      color: #c2185b;
+      font-size: 1.2em;
+      margin: 10px 0;
+    }
+button {
+      padding: 10px 15px;
+      background-color: #ff4081;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+   .product-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.product-buttons button,
+.product-buttons a {
+  display: block;
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.product-buttons .add-to-cart {
+  background-color: #ff6699;
+  color: #fff;
+  border: none;
+}
+
+.product-buttons .add-to-cart:hover {
+  background-color: #e05585;
+}
+
+.product-buttons .whatsapp-button {
+  background-color: #25d366;
+  color: #fff;
+  text-decoration: none;
+}
+
+.product-buttons .whatsapp-button:hover {
+  background-color: #1ebd5a;
+}
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
+      background:  #f7cce2;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    }
+
+    .logo img {
+      height: 50px;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #333;
+    }
+
+    .cart-icon {
+      position: fixed;
+      top: 15px;
+      right: 15px;
+      z-index: 1000;
+    }
+
+    .cart-icon img {
+      width: 40px;
+      height: 40px;
+    }
+
+    #cart-count {
+      position: absolute;
+      top: -5px;
+      right: -5px;
+      background: red;
+      color: white;
+      font-size: 12px;
+      border-radius: 50%;
+      padding: 2px 6px;
+    }
+
+    .search-bar {
+      text-align: center;
+      margin: 20px auto 10px;
+    }
+
+    #searchInput {
+      padding: 10px;
+      width: 90%;
+      max-width: 400px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #f3f3f3;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Cart Icon -->
+  <a href="cart.html" class="cart-icon">
+    <img src="images/cart-icon.png" alt="Cart" />
+    <span id="cart-count">0</span>
+  </a>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <a href="index.html"><img src="images/logo.png" alt="Logo" /></a>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="delivery.html">Delivery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Search Bar -->
+  <div class="search-bar">
+    <input type="text" id="searchInput" placeholder="Search accessories..." oninput="filterProducts()" />
+  </div>
+
+  <main>
+    <h2 style="text-align:center; margin-top:20px;">Home Accessories</h2>
+    <div class="product-grid">
+
+      <!-- Product 1 -->
+       <div class="product product-item">
+        <div class="gallery">
+          <img class="main-img" src="images/cloth.jpg" id="acc3" alt="micro fiber cloth" />
+          <div class="thumbs">
+            <img onclick="document.getElementById('acc3').src='images/cloth1.jpg'" src="images/cloth1.jpg" />
+            <img onclick="document.getElementById('acc3').src='images/cloth.jpg'" src="images/cloth.jpg" />
+          </div>
+        </div>
+        <h3>Kitchen Microfiber Fabric Cloth</h3>
+        <div class="description">
+          <ul>
+            <li>🧽 <strong>Ultra-Absorbent:</strong> Soaks up water and oil quickly</li>
+            <li>✨ <strong>Streak-Free Cleaning:</strong> Perfect for glass, stainless steel, and tiles</li>
+            <li>♻️ <strong>Reusable & Eco-Friendly:</strong> Machine washable and long-lasting</li>
+            <li>👐 <strong>Soft & Non-Abrasive:</strong> Safe on delicate surfaces</li>
+          </ul>
+          <p><strong>Ideal For:</strong> Kitchen counters, stovetops, dishes, sinks, microwave exteriors, and more.</p>
+        </div>
+        <p class="price">Rs.720</p>
+        <button onclick="addToCart('Kitchen Microfiber Cloth', 720)">Add to Cart</button>
+        <a class="whatsapp-button" href="https://wa.me/94779552234?text=Hi! I'm interested in the  Microfiber Fabric Cloth.">Order via WhatsApp</a>
+      </div>
+       
+
+
+
+  <div class="product product-item">
+  <div class="gallery">
+    <img class="main-img" src="images/com.jpg" alt="laundry liquid" />
+  </div>
+
+  <h3>Bold Pink Bottle (Floral Scent)</h3>
+  <ul style="text-align:left; padding-left:18px;">
+    <li>Type: Liquid laundry detergent with antibacterial + aroma formula</li>
+    <li>Fragrance: Floral bouquet scent (long-lasting, up to 24 hours)</li>
+    <li>Contains antibacterial agents to help prevent odor</li>
+    <li>Long-lasting fragrance even if laundry is left for up to 3 hours after washing</li>
+    <li>Designed for both soft and fragrant results</li>
+    <li>Suitable for both standard and drum-type washing machines</li>
+    <li>Origin: Japan</li>
+    <li>Volume: ~850g</li>
+  </ul>
+  <div class="price">Rs. 2,450</div>
+  <button onclick="addToCart('Bold Pink Bottle (Floral Scent)', 2450)">Add to Cart</button>
+  <a class="whatsapp-button" href="https://wa.me/94779552234?text=I%20want%20to%20order%20Bold%20Pink%20Bottle%20(Floral%20Scent)">Order via WhatsApp</a>
+</div>
+
+
+      <!-- Product 2 -->
+      <div class="product product-item">
+        <div class="gallery">
+          <img class="main-img" src="images/carrotcut1.jpg" id="acc4" alt="carrot curler" />
+          <div class="thumbs">
+            <img onclick="document.getElementById('acc4').src='images/carrotcut.jpg'" src="images/carrotcut.jpg" />
+            <img onclick="document.getElementById('acc4').src='images/carrotcut2.jpg'" src="images/carrotcut2.jpg" />
+ <img onclick="document.getElementById('acc4').src='images/carrotcut1.jpg'" src="images/carrotcut1.jpg" />
+          </div>
+        </div>
+        
+ <h3>🥕 Carrot Curler – Spiral Vegetable Shaper</h3>
+  <p>
+    Turn your everyday vegetables into fun and fancy garnishes with this easy-to-use <strong>Carrot Curler</strong>!
+    Just like sharpening a pencil, twist your carrot or cucumber into the curler and watch it form beautiful spirals.
+    A perfect tool for kids’ lunchboxes, party platters, or creative kitchen fun!
+  </p>
+
+  <ul>
+    <li>✨ <strong>Spiral Ribbons:</strong> Works on carrots, cucumbers, and more</li>
+    <li>🧒 <strong>Kid-Friendly:</strong> Fun and safe with adult supervision</li>
+    <li>🍱 <strong>Visual Appeal:</strong> Makes healthy meals exciting and fun</li>
+    <li>🧼 <strong>Easy to Clean:</strong> Compact and washable</li>
+    <li>🌈 <strong>Perfect for:</strong> Bento boxes, party platters, food art</li>
+  </ul>
+
+
+        <p class="price">Rs 870</p>
+        <button onclick="addToCart('carrot curler', 870)">Add to Cart</button>
+        <a class="whatsapp-button" href="https://wa.me/94779552234?text=Hi! I'm interested in the vegetable cutter.">Order via WhatsApp</a>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="product product-item">
+        <div class="gallery">
+          <img class="main-img" src="images/cutter.jpg" id="acc5" alt="vegetale cutter" />
+          <div class="thumbs">
+            <img onclick="document.getElementById('acc5').src='images/cutter2.jpg'" src="images/cutter2.jpg" />
+            <img onclick="document.getElementById('acc5').src='images/cutter3.jpg'" src="images/cutter3.jpg" />
+ <img onclick="document.getElementById('acc5').src='images/cutter.jpg'" src="images/cutter.jpg" />
+          </div>
+        </div>
+
+  <h3>🌸 Flower Shape Vegetable & Fruit Cutter</h3>
+  <p>
+    Make mealtime fun and creative with this adorable <strong>Flower Shape Cutter</strong>! Perfect for slicing vegetables and fruits into beautiful floral designs — great for lunchboxes, bento sets, salads, or decorative party platters.
+  </p>
+
+  <ul>
+    <li>🌼 Cuts fruits & veggies into cute flower shapes</li>
+    <li>🌿 Great for healthy, attractive meals for kids</li>
+    <li>🔪 Safe design with finger guard and handle</li>
+    <li>🧼 Easy to wash and reuse</li>
+    <li>🎨 Encourages picky eaters to enjoy fruits & vegetables</li>
+  </ul>
+       
+        <p class="price">Rs. 980</p>
+        <button onclick="addToCart('vegetable cutter', 980)">Add to Cart</button>
+        <a class="whatsapp-button" href="https://wa.me/94779552234?text=Hi! I'm interested in the vegetable cutter.">Order via WhatsApp</a>
+      </div>
+<div class="product product-item">
+  <div class="gallery">
+    <img class="main-img" src="images/slicer1.jpg" alt="Japanese Vegetable Slicer" />
+  </div>
+
+  <h3>Japanese Vegetable Slicer – Flat Blade</h3>
+
+  <p>
+    This compact and efficient <strong>Japanese-style vegetable slicer</strong> is perfect for quickly shredding cabbage and other vegetables with precision. A must-have tool in any kitchen, especially for preparing salads, stir-fries, or traditional Japanese dishes like okonomiyaki.
+  </p>
+
+  <ul>
+    <li><strong>Material:</strong> Durable plastic body with a stainless steel blade</li>
+    <li><strong>Function:</strong> Easily slices or shreds vegetables like cabbage, carrots, and radishes</li>
+    <li><strong>Design:</strong> Ergonomic grip handle for stability and control</li>
+    <li><strong>Size:</strong> Compact and easy to store in drawers or kitchen racks</li>
+    <li><strong>Safety Warning:</strong> Sharp blade – handle with care (Cutting edge caution printed on packaging)</li>
+    
+  </ul>
+
+  <p class="price">Rs. 980</p>
+  <button onclick="addToCart('Japanese Vegetable Slicer', 980)">Add to Cart</button>
+  <a class="whatsapp-button" href="https://wa.me/94779552234?text=Hi! I'm interested in the Japanese Vegetable Slicer.">Order via WhatsApp</a>
+</div>
+<div class="product product-item">
+  <div class="gallery">
+    <img class="main-img" src="images/slicer2.jpg" alt="Japanese Vegetable Greater" />
+  </div>
+ <h3>Japanese Vegetable Greater</h3>
+
+
+ <p class="price">Rs. 980</p>
+  <button onclick="addToCart('Japanese Vegetable Greater', 980)">Add to Cart</button>
+  <a class="whatsapp-button" href="https://wa.me/94779552234?text=Hi! I'm interested in the Japanese Vegetable Greater.">Order via WhatsApp</a>
+</div>
+ <div class="product product-item">
+        <div class="gallery">
+          <img class="main-img" src="images/peeler1.jpg" id="pee" alt="peeler" />
+          <div class="thumbs">
+            <img onclick="document.getElementById('pee').src='images/peeler2.jpg'" src="images/peeler2.jpg" />
+            <img onclick="document.getElementById('pee').src='images/peeler3.jpg'" src="images/peeler3.jpg" />
+ <img onclick="document.getElementById('pee').src='images/peeler1.jpg'" src="images/peeler1.jpg" />
+ <img onclick="document.getElementById('pee').src='images/peeler4.jpg'" src="images/peeler4.jpg" />
+          </div>
+        </div>
+
+  <h2>Stainless Steel Simple Peeler</h2>
+  <p>This durable and minimalistic peeler is ideal for everyday use in the kitchen. Designed with a sturdy stainless steel blade, it easily handles vegetables like carrots, potatoes, and cucumbers with smooth precision.</p>
+
+  <ul>
+    <li><strong>Material:</strong> Stainless steel blade and handle</li>
+    <li><strong>Function:</strong> Efficiently peels most vegetables and fruits</li>
+    <li><strong>Design:</strong> Compact, lightweight, and easy to clean</li>
+    <li><strong>Best For:</strong> Carrots, cucumbers, potatoes, and more</li>
+  </ul>
+
+  <p class="price">Rs. 480</p>
+  <button onclick="addToCart('Stainless Steel Peeler', 480)">Add to Cart</button>
+  <a class="whatsapp-button" href="https://wa.me/94779552234?text=Hi! I'm interested in the Stainless Steel Simple Peeler.">Order via WhatsApp</a>
+</div>
+
+<div class="product product-item">
+  <div class="gallery">
+    <img class="main-img" src="images/spiral.jpg" id="spp" alt="Potato Spiral Slicer" />
+    <div class="thumbs">
+      <img onclick="document.getElementById('spp').src='images/spiral2.jpg'" src="images/spiral2.jpg" alt="Spiral view 2" />
+      <img onclick="document.getElementById('spp').src='images/spiral3.jpg'" src="images/spiral3.jpg" alt="Spiral view 3" />
+      <img onclick="document.getElementById('spp').src='images/spiral4.jpg'" src="images/spiral4.jpg" alt="Spiral view 4" />
+      <img onclick="document.getElementById('spp').src='images/spiral.jpg'" src="images/spiral.jpg" alt="Main spiral view" />
+    </div>
+  </div>
+
+  <div class="product-details">
+    <h2 class="product-title">Spiral Potato Slicer Stick Tool</h2>
+
+    <p class="product-description">
+      Create fun and crispy spiral potato snacks at home! This easy-to-use slicer is perfect for potatoes, cucumbers, carrots, and more. Twist, slice, and fry for the ultimate tornado snack experience!
+    </p>
+
+    <ul class="product-features">
+      <li>🌟 Makes spiral/tornado potato slices</li>
+      <li>🔪 Sharp blade for even cutting</li>
+      <li>🥔 Works on multiple vegetables</li>
+      <li>🧼 Easy to clean and reusable</li>
+      <li>🧒 Safe and fun for home use</li>
+    </ul>
+ <p class="price">Rs. 480</p>
+
+ <button onclick="addToCart('Spiral Potato Slicer ', 480)">Add to Cart</button>
+        <a class="whatsapp-button" href="https://wa.me/94779552234?text=Hi! I'm interested in the  Spiral Potato Slicer .">Order via WhatsApp</a>
+      </div>
+   
+</div>
+<div class="product product-item" data-name="6pcs Cute Resin Cactus Magnetic Fridge Stickers">
+  <div class="gallery">
+    <img class="main-img" src="images/cactus-magnets.jpg" id="cactus-magnets-img" alt="6pcs Cute Resin Cactus Magnetic Fridge Stickers - Kitchen Decor">
+    <div class="thumbs">
+      <img onclick="document.getElementById('cactus-magnets-img').src='images/cactus-magnets.jpg'" src="images/cactus-magnets.jpg" alt="Set of 6 cactus fridge magnets">
+      <img onclick="document.getElementById('cactus-magnets-img').src='images/cactus-magnets2.jpg'" src="images/cactus-magnets2.jpg" alt="Cactus magnets on fridge door">
+      <img onclick="document.getElementById('cactus-magnets-img').src='images/cactus-magnets3.jpg'" src="images/cactus-magnets3.jpg" alt="Closeup of resin cactus magnets">
+    </div>
+  </div>
+
+  <h3>6pcs Cute Resin Cactus Magnetic Fridge Stickers</h3>
+  <p>
+    Add a touch of fun and charm to your home with this set of <strong>6 adorable resin cactus fridge magnets</strong>.  
+    Each piece features a unique cactus design in a little pot, perfect for decorating your <strong>fridge, whiteboard, or office space</strong>.  
+    Great for keeping notes, photos, and reminders in style — while also serving as a cute piece of kitchen decor!
+  </p>
+
+  <h4>✨ Features</h4>
+  <ul>
+    <li>Set includes <strong>6 unique cactus designs</strong> with colorful pots.</li>
+    <li>Made of high-quality <strong>resin with strong magnets</strong>.</li>
+    <li>Perfect for <strong>fridge, whiteboard, lockers, or office use</strong>.</li>
+    <li>Fun DIY home decor — mix & match your cactus garden!</li>
+    <li>Lightweight, durable, and long-lasting.</li>
+  </ul>
+
+  <h4>📍 Perfect For</h4>
+  <p>Kitchen, dining room, office, or as a thoughtful gift for plant lovers and home decor enthusiasts.</p>
+
+  <p class="price" style="display:block;width:100%;text-align:center;">Rs. 980</p>
+  <div class="product-buttons" style="display:flex;flex-direction:column;gap:8px;">
+    <button style="width:100%;" onclick="addToCart('6pcs Cute Resin Cactus Magnetic Fridge Stickers', 980)">Add to Cart</button>
+    <a class="whatsapp-button" style="width:100%;text-align:center;" href="https://wa.me/94779552234?text=Hi!%20I%27m%20interested%20in%20the%206pcs%20Cute%20Resin%20Cactus%20Magnetic%20Fridge%20Stickers." target="_blank">Order via WhatsApp</a>
+  </div>
+</div>
+
+
+
+
+
+<div class="product product-item">
+  <div class="gallery">
+    <img class="main-img" src="images/greater.jpg" alt="Ginger grater" />
+  </div>
+  <div class="product-details">
+    <h2 class="product-title">Japanese Condiment Grater & Storage Box</h2>
+
+    <p class="product-description">
+      A compact and efficient 2-in-1 grater and container for grating fresh condiments like ginger, garlic, wasabi, or daikon. Made in Japan with a stainless steel grating surface and a tight-sealing lid to store your grated ingredients directly in the fridge.
+    </p>
+
+    <ul class="product-features">
+      <li>🌀 Grater + storage container in one</li>
+      <li>🧄 Perfect for ginger, garlic, wasabi, and more</li>
+      <li>✨ Stainless steel grating surface</li>
+      <li>🧼 Easy to clean and reuse</li>
+      <li>🇯🇵 Made in Japan</li>
+    </ul>
+
+    <p class="price">Rs. 820</p>
+    <button onclick="addToCart('Ginger & Garlic Grater', 820)">Add to Cart</button>
+    <a class="whatsapp-button" href="https://wa.me/94779552234?text=Hi! I'm interested in the Japanese Condiment Grater & Storage Box.">Order via WhatsApp</a>
+  </div>
+</div>
+<!-- Product 1 -->
+<div class="product product-item">
+  <div class="gallery">
+    <img class="main-img" src="images/cut.jpg" id="cut" alt="Crinkle Cutter" />
+    <div class="thumbs">
+      <img onclick="document.getElementById('cut').src='images/cut1.jpg'" src="images/cut1.jpg" alt="Crinkle Cutter Side" />
+      <img onclick="document.getElementById('cut').src='images/cut2.jpg'" src="images/cut2.jpg" alt="Crinkle Cutter Angle" />
+      <img onclick="document.getElementById('cut').src='images/cut3.jpg'" src="images/cut3.jpg" alt="Crinkle Cutter Detail" />
+      <img onclick="document.getElementById('cut').src='images/cut.jpg'" src="images/cut.jpg" alt="Crinkle Cutter Front" />
+    </div>
+  </div>
+
+  <div class="product-details">
+    <h2 class="product-title">Stainless Steel Crinkle Cutter – Wavy Knife</h2>
+
+    <p class="product-description">
+      Upgrade your kitchen prep with this <strong>Stainless Steel Crinkle Cutter</strong>, perfect for making fun, wavy slices of fruits and vegetables. Whether you're making homemade French fries, crinkle-cut carrots, or eye-catching salad toppings, this durable and easy-to-use tool adds creativity to every meal!
+    </p>
+
+    <ul class="product-features">
+      <li>🔪 <strong>Wavy Blade Design:</strong> Creates attractive crinkle cuts</li>
+      <li>🥗 <strong>Perfect for Salads & Snacks:</strong> Adds texture and style</li>
+      <li>🛠️ <strong>Durable Stainless Steel:</strong> Sharp and rust-resistant</li>
+      <li>🧽 <strong>Easy to Clean:</strong> Rinse or hand wash</li>
+      <li>👩‍🍳 <strong>Comfortable Handle:</strong> Non-slip grip</li>
+    </ul>
+
+    <p class="price">Rs. 480</p>
+
+    <div class="product-buttons">
+      <button class="add-to-cart" onclick="addToCart('Stainless Steel Crinkle Cutter – Wavy Knife', 480)">Add to Cart</button>
+      <a class="whatsapp-button" href="https://wa.me/94779552234?text=Hi! I'm interested in the Stainless Steel Crinkle Cutter – Wavy Knife.">Order via WhatsApp</a>
+    </div>
+  </div>
+</div>
+
+<!-- Product 2 -->
+<div class="product product-item">
+  <div class="gallery">
+    <img class="main-img" src="images/magic.jpg" alt="Melamine Sponge Mini Cubes – 40 pcs" />
+  </div>
+
+  <div class="product-details">
+    <h2 class="product-title">Melamine Sponge Mini Cubes – 40 pcs</h2>
+
+    <p class="product-description">
+      These compact melamine sponge cubes are a powerful cleaning solution in a small package! Made with high-density foam, they effortlessly clean surfaces with just water — no detergent required.
+    </p>
+
+    <ul class="product-features">
+      <li>🧽 <strong>40 mini cubes</strong> – each 3cm x 3cm x 3cm</li>
+      <li>💧 <strong>Just add water</strong> – no chemicals needed</li>
+      <li>✨ <strong>Removes tough stains</strong></li>
+      <li>📦 <strong>Convenient pack</strong></li>
+      <li>🇯🇵 <strong>Imported from Japan</strong></li>
+    </ul>
+
+    <p class="price">Rs. 480</p>
+
+    <div class="product-buttons">
+      <button class="add-to-cart" onclick="addToCart('Melamine Sponge Mini Cubes – 40 pcs', 480)">Add to Cart</button>
+      <a class="whatsapp-button" target="_blank" href="https://wa.me/94779552234?text=Hi! I'm interested in the Melamine Sponge Mini Cubes – 40 pcs.">Order via WhatsApp</a>
+    </div>
+  </div>
+</div>
+
+<!-- Product 3 -->
+<div class="product product-item">
+  <div class="gallery">
+    <img class="main-img" src="images/potholder.jpg" alt="Round Rope Trivet / Pot Holder" />
+  </div>
+
+  <div class="product-details">
+    <h2 class="product-title">Round Rope Trivet / Pot Holder</h2>
+
+    <p class="product-description"><strong>Purpose:</strong> Protects tables and countertops from hot pots, pans, or dishes.</p>
+
+    <h4>Instructions:</h4>
+    <ul class="product-features">
+      <li>Place the trivet on a flat surface before setting down hot cookware.</li>
+      <li>Avoid prolonged contact with wet or greasy surfaces.</li>
+      <li>Wipe clean with a damp cloth, air-dry completely.</li>
+      <li>Store in a dry place; hang using the loop if desired.</li>
+      <li>Do not machine wash or tumble dry.</li>
+    </ul>
+
+    <p class="price">Rs. 480</p>
+
+    <div class="product-buttons">
+      <button class="add-to-cart" onclick="addToCart('Round Rope Trivet / Pot Holder', 480)">Add to Cart</button>
+      <a class="whatsapp-button" href="https://wa.me/94779552234?text=Hi! I'm interested in the Round Rope Trivet / Pot Holder.">Order via WhatsApp</a>
+    </div>
+  </div>
+</div>
+
+
+   <div class="product product-item">
+  <div class="gallery">
+    <img class="main-img" src="images/bamspoon.jpg" alt="bamboo turner / Pot Holder" />
+  </div>
+
+  <div class="product-details">
+    <h2 class="product-title">Bamboo Turner (12-inch)</h2>
+
+    <p class="product-description">
+      A durable and eco-friendly kitchen tool perfect for flipping, stirring, or serving food. Gentle on non-stick cookware, this 12-inch bamboo turner is a must-have for any home chef.
+    </p>
+
+    <h4>Instructions:</h4>
+    <ul class="product-features">
+      <li>🧼 Wash with mild soap and warm water before first use.</li>
+      <li>🍳 Use only for cooking or serving food; safe for non-stick cookware.</li>
+      <li>💧 Do not soak in water for long periods — bamboo can swell and warp.</li>
+      <li>🪵 Dry immediately with a cloth after washing.</li>
+      <li>🏠 Store in a dry place; avoid prolonged heat or direct sunlight.</li>
+      <li>🚫 Not dishwasher safe — hand wash only.</li>
+    </ul>
+
+    <p class="price">Rs. 740</p>
+
+    <div class="product-buttons">
+      <button onclick="addToCart('Bamboo Turner (12-inch)', 740)">Add to Cart</button>
+      <a class="whatsapp-button" href="https://wa.me/94779552234?text=Hi! I'm interested in the Bamboo Turner (12-inch).">Order via WhatsApp</a>
+    </div>
+  </div>
+</div>
+
+
+    
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Little Buds Imports | Akurana, Kandy, Sri Lanka</p>
+  </footer>
+
+  <script>
+    function addToCart(name, price) {
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+      cart.push({ name: name, price: price });
+      localStorage.setItem('cart', JSON.stringify(cart));
+      updateCartCount();
+      alert(name + " has been added to your cart.");
+    }
+
+    function updateCartCount() {
+      const cart = JSON.parse(localStorage.getItem('cart')) || [];
+      document.getElementById('cart-count').textContent = cart.length;
+    }
+
+    function filterProducts() {
+      const input = document.getElementById("searchInput").value.toLowerCase().trim();
+      const products = document.querySelectorAll(".product-item");
+      products.forEach(product => {
+        product.style.display = product.textContent.toLowerCase().includes(input) ? "block" : "none";
+      });
+    }
+
+    updateCartCount(); // On page load
+  </script>
+
+</body>
+</html>

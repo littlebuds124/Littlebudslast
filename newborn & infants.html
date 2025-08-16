@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Newborn & Infant Toys | Little Buds Japan Imports</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7cce2;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #f7cce2;
+      padding: 10px 20px;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .logo img {
+      height: 50px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #333;
+    }
+
+    .cart-icon {
+      position: fixed;
+      top: 15px;
+      right: 15px;
+      z-index: 1000;
+    }
+
+    .cart-icon img {
+      width: 40px;
+      height: 40px;
+    }
+
+    #cart-count {
+      position: absolute;
+      top: -5px;
+      right: -5px;
+      background: red;
+      color: white;
+      font-size: 12px;
+      border-radius: 50%;
+      padding: 2px 6px;
+    }
+
+    .search-bar {
+      padding: 15px;
+      text-align: center;
+      background-color: #f9f9f9;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .search-bar input {
+      padding: 8px;
+      width: 60%;
+      max-width: 400px;
+    }
+
+    .search-bar button {
+      padding: 8px 12px;
+      margin-left: 8px;
+    }
+
+    .product-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .product {
+      border: 1px solid #ddd;
+      padding: 15px;
+      max-width: 250px;
+      text-align: center;
+      background: #f4f4f4;
+      border-radius: 8px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
+
+    .thumbs {
+      margin-top: 10px;
+    }
+
+    .thumbs img {
+      width: 70px;
+      margin: 5px;
+      cursor: pointer;
+      border: 2px solid transparent;
+      border-radius: 4px;
+    }
+
+    .thumbs img:hover {
+      border-color: #999;
+    }
+
+    .price {
+      font-weight: bold;
+      color: #c2185b;
+      font-size: 1.2em;
+      margin: 10px 0;
+    }
+
+    button {
+      padding: 10px 15px;
+      background-color: #ff4081;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .whatsapp-button {
+      display: inline-block;
+      margin-top: 10px;
+      background-color: #25D366;
+      color: white;
+      padding: 10px 15px;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #f3f3f3;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Cart Icon -->
+  <a href="cart.html" class="cart-icon">
+    <img src="images/cart-icon.png" alt="Cart" />
+    <span id="cart-count">0</span>
+  </a>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <a href="index.html"><img src="images/logo.png" alt="Little Buds Logo" /></a>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="delivery.html">Delivery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Search Bar -->
+  <div class="search-bar">
+    <input type="text" id="searchInput" placeholder="Search toys..." onkeyup="filterProducts()" />
+  </div>
+
+  <!-- Main Content -->
+  <main>
+    <h2 style="text-align:center; margin-top:20px;">Newborn & Infant Toys</h2>
+    <div class="product-grid" id="productGrid">
+
+      <!-- Toy 1 --><div class="product">
+  <div class="gallery">
+    <img class="main-img" src="images/teether1.jpg" id="teetherImg" alt="Silicone Baby Phone Teether" />
+    <div class="thumbs">
+      <img onclick="document.getElementById('teetherImg').src='images/teether1.jpg'" src="images/teether1.jpg" />
+      <img onclick="document.getElementById('teetherImg').src='images/teether2.jpg'" src="images/teether2.jpg" />
+      
+    </div>
+  </div>
+
+  <h3>Silicone Baby Phone Teether</h3>
+  <ul>
+    <li>📱 Realistic phone design keeps babies engaged</li>
+    <li>🦷 Made of 100% food-grade, BPA-free silicone</li>
+    <li>💪 Soft yet durable – gentle on gums</li>
+    <li>👶 Easy to grip – perfect for little hands</li>
+    <li>🧼 Washable and safe to sterilize</li>
+  </ul>
+  <p class="price">Rs. 1240</p>
+  <button onclick="addToCart('Silicone Baby Phone Teether', 1240)">Add to Cart</button>
+  <a class="whatsapp-button" href="https://wa.me/94779552234?text=Hi! I'm interested in the Silicone Baby Phone Teether.">Order via WhatsApp</a>
+</div>
+<div class="product">
+  <div class="gallery">
+    <img class="main-img" src="images/teether3.jpg" id="teether" alt="Silicone Baby Phone Teether" />
+    <div class="thumbs">
+      <img onclick="document.getElementById('teether').src='images/teether4.jpg'" src="images/teether4.jpg" />
+      <img onclick="document.getElementById('teether').src='images/teether3.jpg'" src="images/teether3.jpg" />
+      
+    </div>
+  </div>
+ <div class="product-details">
+    <h2 class="product-title">Multi-Sensory Pull String Baby Toy</h2>
+
+    <p class="product-description">
+      A fun and interactive toy designed to stimulate your baby's senses and develop motor skills. 
+    </p>
+
+    <ul class="product-features">
+      <li>🖐️ <strong>Pull Strings:</strong> Strengthen grip and coordination with textured strings</li>
+      <li>🦷 <strong>Teether-Friendly:</strong> Made with soft, food-grade silicone to soothe teething gums</li>
+      <li>🔔 <strong>Wobble Rattle:</strong> Provides gentle sound for auditory development</li>
+      <li>👶 <strong>Safe Design:</strong> BPA-free, durable, and easy to clean</li>
+      <li>🎁 <strong>Perfect Gift:</strong> Ideal for babies 6 months and older</li>
+    </ul>
+ <p class="price">Rs. 2340</p>
+
+  <button onclick="addToCart('Silicone Baby string pull developmental toy', 1240)">Add to Cart</button>
+  <a class="whatsapp-button" href="https://wa.me/94779552234?text=Hi! I'm interested in the Silicone Baby string pull developmental toy.">Order via WhatsApp</a>
+</div>
+</div>
+
+
+<div class="product product-item" data-name="Silicone Remote Control Toy">
+  <div class="gallery">
+    <img class="main-img" src="images/silicone-remote.jpg" id="silicone-remote-img" alt="Silicone Remote Control Toy for Kids">
+    <div class="thumbs">
+      <img onclick="document.getElementById('silicone-remote-img').src='images/silicone-remote1.jpg'" src="images/silicone-remote1.jpg" alt="Silicone remote front view">
+      <img onclick="document.getElementById('silicone-remote-img').src='images/silicone-remote.jpg'" src="images/silicone-remote.jpg" alt="Silicone toy remote alternative view">
+    </div>
+  </div>
+
+  <h3>1pc/2pcs Silicone Remote Control Toy</h3>
+  <p>
+    A fun and safe <strong>silicone remote control toy</strong>, designed to look like a real TV remote while being soft, chewable, and baby-friendly.  
+    Perfect as a holiday gift for boys and girls, this toy keeps little ones entertained while encouraging sensory exploration and pretend play.  
+  </p>
+
+  <h4>✨ Features</h4>
+  <ul>
+    <li>Made from soft, baby-safe silicone material.</li>
+    <li>Fun pretend-play remote design with colorful buttons.</li>
+    <li>Encourages sensory play, hand-eye coordination, and imagination.</li>
+    <li>Perfect gift idea for birthdays, holidays, and everyday fun.</li>
+    <li>Available in 1pc or 2pcs packs.</li>
+  </ul>
+
+  <h4>📏 Size</h4>
+  <p>14.5 cm × 5.5 cm (5.71 × 2.17 inches)</p>
+<p class="price">Rs. 540</p>
+        <button onclick="addToCart('Silicone Remote Control Toy', 540)">Add to Cart</button>
+        <a class="whatsapp-button" href="https://wa.me/94779552234?text=Hi! I'm interested in the Silicone Remote Control Toy.">Order via WhatsApp</a>
+      </div>
+
+<div class="product product-item" data-name="Kids 3D Learning Touch Book">
+  <div class="gallery">
+    <img class="main-img" src="images/3d-learning-book.jpg" id="learning-book-img" alt="Kids 3D Learning Touch Book - Early Education Storybook">
+    <div class="thumbs">
+      <img onclick="document.getElementById('learning-book-img').src='images/3d-learning-book.jpg'" src="images/3d-learning-book.jpg" alt="Front cover of Kids 3D Learning Touch Book">
+      <img onclick="document.getElementById('learning-book-img').src='images/3d-learning-book2.jpg'" src="images/3d-learning-book2.jpg" alt="Inside pages of Kids 3D Learning Touch Book">
+      <img onclick="document.getElementById('learning-book-img').src='images/3d-learning-book3.jpg'" src="images/3d-learning-book3.jpg" alt="Colorful illustrations of Kids 3D Learning Touch Book">
+    </div>
+  </div>
+
+  <h3>Kids 3D Learning Touch Book</h3>
+  <p>
+    A <strong>colorful early education cognitive storybook</strong> designed to spark curiosity and encourage hands-on learning in children.  
+    Made from durable polyamide material with fun <strong>3D textures and mirror reflections</strong>, this interactive book helps develop sensory skills, imagination, and early literacy.  
+    Perfect for boys and girls, party favors, school supplies, or holiday gifts!
+  </p>
+
+  <h4>✨ Features</h4>
+  <ul>
+    <li>Interactive <strong>3D touch-and-feel pages</strong> with vibrant designs.</li>
+    <li>Mirror reflections for added fun and curiosity.</li>
+    <li>Encourages sensory play, imagination, and early cognitive development.</li>
+    <li>Durable polyamide material — safe for kids.</li>
+    <li>Lightweight and easy for small hands to hold.</li>
+    <li>Great for party favors, holiday gifts, or classroom learning tools.</li>
+  </ul>
+
+  <h4>📘 Ideal For</h4>
+  <p>Toddlers, preschoolers, and young learners who enjoy colorful, interactive books.</p>
+
+<p class="price">Rs. 540</p>
+        <button onclick="addToCart('Kids 3D Learning Touch Book', 540)">Add to Cart</button>
+        <a class="whatsapp-button" href="https://wa.me/94779552234?text=Hi! I'm interested in the Kids 3D Learning Touch Book.">Order via WhatsApp</a>
+      </div>
+
+
+
+
+
+
+      <div class="product" data-name="tummy time mat">
+        <div class="gallery">
+          <img class="main-img" src="images/watermat.jpg" id="watermatMain" alt="Tummy time mat" loading="lazy" />
+          <div class="thumbs">
+            <img onclick="document.getElementById('watermatMain').src='images/watermat.jpg'" src="images/watermat.jpg" loading="lazy" />
+            <img onclick="document.getElementById('watermatMain').src='images/watermat3.jpg'" src="images/watermat3.jpg" loading="lazy" />
+            <img onclick="document.getElementById('watermatMain').src='images/watermat1.jpg'" src="images/watermat1.jpg" loading="lazy" />
+          </div>
+        </div>
+        <h3>Tummy Time Mat</h3>
+        <ul>
+          <li>Safe & soft for newborns</li>
+          <li>Stimulates sensory development</li>
+          <li>Washable and baby-friendly</li>
+        </ul>
+        <p class="price">Rs. 1,250</p>
+        <button onclick="addToCart('Tummy Time Mat', 1250)">Add to Cart</button>
+        <a class="whatsapp-button" href="https://wa.me/94779552234?text=Hi! I'm interested in the Tummy Time Mat.">Order via WhatsApp</a>
+      </div>
+
+      <!-- Toy 2 -->
+      <div class="product" data-name="caterpillar puzzle toy">
+        <div class="gallery">
+          <img class="main-img" src="images/caterpillar1.jpg" id="caterpillar" alt="Caterpillar Puzzle" loading="lazy" />
+          <div class="thumbs">
+            <img onclick="document.getElementById('caterpillar').src='images/caterpillar2.jpg'" src="images/caterpillar2.jpg" loading="lazy" />
+            <img onclick="document.getElementById('caterpillar').src='images/caterpillar.jpg'" src="images/caterpillar.jpg" loading="lazy" />
+          </div>
+        </div>
+        <h3>Mini Fidget Caterpillar Toy</h3>
+        <ul>
+          <li>🐾 Fun Crawling Sensory Toy – Lifelike movement</li>
+          <li>🧠 Promotes Sensory Development</li>
+          <li>😌 Calming for all ages</li>
+          <li>🎵 Clicking Sound</li>
+          <li>✨ Soft & Flexible</li>
+        </ul>
+        <p class="price">Rs. 540</p>
+        <button onclick="addToCart('Mini Fidget Caterpillar Toy', 540)">Add to Cart</button>
+        <a class="whatsapp-button" href="https://wa.me/94779552234?text=Hi! I'm interested in the Mini Fidget Caterpillar Toy.">Order via WhatsApp</a>
+      </div>
+
+      <!-- Toy 3 -->
+      <div class="product" data-name="soft cloth book ladybug baby">
+        <div class="gallery">
+          <img class="main-img" src="images/bug.jpg" id="ladybug" alt="Ladybug Cloth Book" loading="lazy" />
+          <div class="thumbs">
+            <img onclick="document.getElementById('ladybug').src='images/bug2.jpg'" src="images/bug2.jpg" loading="lazy" />
+            <img onclick="document.getElementById('ladybug').src='images/bug.jpg'" src="images/bug.jpg" loading="lazy" />
+          </div>
+        </div>
+        <h3>Ladybug Soft Cloth Book</h3>
+        <ul>
+          <li>📘 Stimulating feature on every page</li>
+          <li>🌈 Bright colors, peek-a-boo flaps, mirrors & sounds to engage your baby</li>
+          <li>🧠 Enhances hand-eye-mind coordination</li>
+          <li>👶 Develops sound, tactile & visual perception</li>
+          <li>⏳ Improves attention span in young children</li>
+          <li>👼 Ideal for newborns to toddlers</li>
+          <li>🧼 Washable & long-lasting</li>
+          <li>📄 No tear pages</li>
+          <li>🦷 Safe to chew and touch</li>
+        </ul>
+        <p class="price">Rs. 1,620</p>
+        <button onclick="addToCart('Soft Cloth Book', 1620)">Add to Cart</button>
+        <a class="whatsapp-button" href="https://wa.me/94779552234?text=Hi! I'm interested in the Soft Cloth Book.">Order via WhatsApp</a>
+      </div>
+
+ <div class="product" data-name="soft cloth book Sea World">
+        <div class="gallery">
+          <img class="main-img" src="images/sea.jpg" id="seaworld" alt="seaworld Cloth Book" loading="lazy" />
+          <div class="thumbs">
+            <img onclick="document.getElementById('seaworld').src='images/sea2.jpg'" src="images/sea2.jpg" loading="lazy" />
+            <img onclick="document.getElementById('seaworld').src='images/sea.jpg'" src="images/sea.jpg" loading="lazy" />
+          </div>
+        </div>
+ <h3>seaworld Soft Cloth Book</h3>
+<ul>
+  <li>🌊 Explore an undersea world with vibrant pages full of marine animals</li>
+  <li>🐠 Introduces baby to colors, shapes, and sea creatures in a fun way</li>
+  <li>🔊 Includes crinkle sounds and squeakers to stimulate hearing</li>
+  <li>👶 Easy for tiny hands to grip, hold, and flip through</li>
+  <li>🧠 Encourages early sensory development and hand-eye coordination</li>
+  <li>🧼 100% washable, soft cloth – safe for teething and rough play</li>
+  <li>🧳 Lightweight and portable – perfect for travel or bedtime routines</li>
+</ul>
+ <p class="price">Rs. 970</p>
+        <button onclick="addToCart('seaworld cloth book, 970)">Add to Cart</button>
+        <a class="whatsapp-button" href="https://wa.me/94779552234?text=Hi! I'm interested in the soft cloth book.">Order via WhatsApp</a>
+      </div>
+
+      <!-- Toy 4 -->
+      <div class="product" data-name="pull out carrot toy baby plush">
+        <div class="gallery">
+          <img class="main-img" src="images/carrot.jpg" id="carrot" alt="Carrot Toy" loading="lazy" />
+          <div class="thumbs">
+            <img onclick="document.getElementById('carrot').src='images/carrot1.jpg'" src="images/carrot1.jpg" loading="lazy" />
+            <img onclick="document.getElementById('carrot').src='images/carrot2.jpg'" src="images/carrot2.jpg" loading="lazy" />
+          <img onclick="document.getElementById('carrot').src='images/carrot.jpg'" src="images/carrot.jpg" loading="lazy" />
+            <img onclick="document.getElementById('carrot').src='images/carrot3.jpg'" src="images/carrot3.jpg" loading="lazy" />
+          </div>
+        </div>
+        <h3>Pull-Out Carrot Toy</h3>
+        <ul>
+          <li>Soft plush material – safe for all ages</li>
+          <li>Interactive "pull-out" design</li>
+          <li>Bright, cheerful colors</li>
+          <li>Great gift for toddlers</li>
+        </ul>
+        <p class="price">Rs. 1,270</p>
+        <button onclick="addToCart('Pull-Out Carrot Toy', 1270)">Add to Cart</button>
+        <a class="whatsapp-button" href="https://wa.me/94779552234?text=Hi! I'm interested in the Pull-Out Carrot Toy.">Order via WhatsApp</a>
+      </div>
+
+      <!-- Toy 5 -->
+      <div class="product" data-name="baby tissue box toy ">
+        <div class="gallery">
+          <img class="main-img" src="images/tissue1.jpg" id="tissuebox" alt="Tissue Box Toy" loading="lazy" />
+          <div class="thumbs">
+            <img onclick="document.getElementById('tissuebox').src='images/tissue2.jpg'" src="images/tissue2.jpg" loading="lazy" />
+            <img onclick="document.getElementById('tissuebox').src='images/tissue1.jpg'" src="images/tissue1.jpg" loading="lazy" />
+          </div>
+        </div>
+        <h3>Baby Tissue Box Toy</h3>
+        <ul>
+          <li>Colorful crinkle tissues for sensory play</li>
+          <li>Soft plush box with pullable cloths</li>
+          <li>Encourages fine motor skills</li>
+          <li>Washable and baby-safe</li>
+        </ul>
+        <p class="price">Rs. 1,380</p>
+        <button onclick="addToCart('Baby Tissue Box Toy', 1380)">Add to Cart</button>
+        <a class="whatsapp-button" href="https://wa.me/94779552234?text=Hi! I'm interested in the Baby Tissue Box Toy.">Order via WhatsApp</a>
+      </div>
+<div class="product" data-name="baby rattle socks">
+  <div class="gallery">
+    <img class="main-img" src="images/socks.jpg" id="rattleSocks" alt="Baby Rattle Socks" loading="lazy" />
+    <div class="thumbs">
+      <img onclick="document.getElementById('rattleSocks').src='images/socks3.jpg'" src="images/socks3.jpg" loading="lazy" />
+      <img onclick="document.getElementById('rattleSocks').src='images/socks2.jpg'" src="images/socks2.jpg" loading="lazy" />
+      <img onclick="document.getElementById('rattleSocks').src='images/socks.jpg'" src="images/socks.jpg" loading="lazy" />
+    </div>
+  </div>
+  <h3>Baby Rattle Socks</h3>
+  <ul>
+    <li>🐾 Soft, cozy & safe for newborns</li>
+    <li>🐣 Built-in rattles encourage movement</li>
+    <li>🎵 Stimulates baby’s auditory sense</li>
+    <li>🎨 Fun, colorful animal designs</li>
+  </ul>
+  <p class="price">Rs. 980</p>
+  <button onclick="addToCart('Baby Rattle Socks', 980)">Add to Cart</button>
+  <a class="whatsapp-button" href="https://wa.me/94779552234?text=Hi! I'm interested in the Baby Rattle Socks.">Order via WhatsApp</a>
+</div>
+
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Little Buds Japan Imports | Akurana, Kandy, Sri Lanka</p>
+  </footer>
+
+  <script>
+    function addToCart(name, price) {
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+      cart.push({ name: name, price: price });
+      localStorage.setItem('cart', JSON.stringify(cart));
+      updateCartCount();
+      alert(name + " has been added to your cart.");
+    }
+
+    function updateCartCount() {
+      const cart = JSON.parse(localStorage.getItem('cart')) || [];
+      document.getElementById('cart-count').textContent = cart.length;
+    }
+
+    function filterProducts() {
+      const input = document.getElementById("searchInput").value.toLowerCase();
+      const products = document.querySelectorAll(".product");
+      products.forEach(product => {
+        const name = product.getAttribute("data-name");
+        product.style.display = name.includes(input) ? "block" : "none";
+      });
+    }
+
+    updateCartCount();
+  </script>
+</body>
+</html>

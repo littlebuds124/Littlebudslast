@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DAISO Collections | Little Buds Japan Imports</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7cce2;
+      margin: 0;
+      padding: 0;
+    }
+
+    .product-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .product {
+      border: 1px solid #ddd;
+      padding: 15px;
+      max-width: 250px;
+      text-align: center;
+      background: #f4f4f4;
+      border-radius: 8px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
+
+    .price {
+      font-weight: bold;
+      color: #c2185b;
+      font-size: 1.2em;
+      margin: 10px 0;
+    }
+
+    button {
+      padding: 10px 0;
+      background-color: #ff4081;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 100%;
+      font-size: 0.95em;
+      font-weight: bold;
+      transition: background-color 0.2s ease;
+    }
+
+    button:hover {
+      background-color: #e2336b;
+    }
+
+    .whatsapp-button {
+      display: inline-block;
+      width: 100%;
+      text-align: center;
+      background-color: #25D366;
+      color: white;
+      padding: 10px 0;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 0.95em;
+      font-weight: bold;
+      transition: background-color 0.2s ease;
+    }
+
+    .whatsapp-button:hover {
+      background-color: #1ebf5a;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
+      background: #f7cce2;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    }
+
+    .logo img {
+      height: 50px;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #333;
+    }
+
+    .cart-icon {
+      position: fixed;
+      top: 15px;
+      right: 15px;
+      z-index: 1000;
+    }
+
+    .cart-icon img {
+      width: 40px;
+      height: 40px;
+    }
+
+    #cart-count {
+      position: absolute;
+      top: -5px;
+      right: -5px;
+      background: red;
+      color: white;
+      font-size: 12px;
+      border-radius: 50%;
+      padding: 2px 6px;
+    }
+
+    .search-bar {
+      text-align: center;
+      margin: 20px auto 10px;
+    }
+
+    #searchInput {
+      padding: 10px;
+      width: 90%;
+      max-width: 400px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #f3f3f3;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Cart Icon -->
+  <a href="cart.html" class="cart-icon">
+    <img src="images/cart-icon.png" alt="Cart" />
+    <span id="cart-count">0</span>
+  </a>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <a href="index.html"><img src="images/logo.png" alt="Logo" /></a>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="delivery.html">Delivery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Search Bar -->
+  <div class="search-bar">
+    <input type="text" id="searchInput" placeholder="Search DAISO items..." onkeyup="filterProducts()" />
+  </div>
+
+  <!-- Product Section -->
+  <div class="product-grid">
+
+    <!-- Product 1 -->
+    <div class="product product-item" data-name="Cotton Oven Mitt">
+      <div class="gallery">
+        <img class="main-img" src="images/dai.jpg" alt="Cotton Oven Mitt" />
+      </div>
+      <h3>Cotton Oven Mitt</h3>
+      <p>Protects your hands from heat when handling hot cookware, baking trays, or oven racks. Heat-resistant, comfortable, and durable. Made in Japan 🇯🇵</p>
+      <div class="price">Rs. 620</div>
+      <button onclick="addToCart('Cotton Oven Mitt', 620)">Add to Cart</button>
+      <a class="whatsapp-button" href="https://wa.me/94779552234?text=I%20want%20to%20order%20Cotton%20Oven%20Mitt%20(Rs.%20620)">Order via WhatsApp</a>
+    </div>
+
+    <!-- Product 2 -->
+    <div class="product product-item" data-name="All Purpose Kitchen Knife">
+      <div class="gallery">
+        <img class="main-img" src="images/dai1.jpg" alt="All Purpose Kitchen Knife" />
+      </div>
+      <h3>All Purpose Kitchen Knife</h3>
+      <p>Versatile knife for cutting vegetables, fruits, and meat. Sharp stainless-steel blade with comfortable handle for daily cooking use. Made in Japan 🇯🇵</p>
+      <div class="price">Rs. 970</div>
+      <button onclick="addToCart('All Purpose Kitchen Knife', 970)">Add to Cart</button>
+      <a class="whatsapp-button" href="https://wa.me/94779552234?text=I%20want%20to%20order%20All%20Purpose%20Kitchen%20Knife%20(Rs.%20970)">Order via WhatsApp</a>
+    </div>
+
+    <!-- Product 3 -->
+    <div class="product product-item" data-name="Vegetable Chopper Blade">
+      <div class="gallery">
+        <img class="main-img" src="images/dai2.jpg" alt="Vegetable Chopper Blade" />
+      </div>
+      <h3>Vegetable Chopper Blade</h3>
+      <p>Sharp replacement blade for vegetable choppers. Ideal for cutting vegetables quickly and evenly for salads, soups, and stir-fries. Made in Japan 🇯🇵</p>
+      <div class="price">Rs. 820</div>
+      <button onclick="addToCart('Vegetable Chopper Blade', 820)">Add to Cart</button>
+      <a class="whatsapp-button" href="https://wa.me/94779552234?text=I%20want%20to%20order%20Vegetable%20Chopper%20Blade%20(Rs.%20820)">Order via WhatsApp</a>
+    </div>
+
+<div class="product product-item" data-name="Nail Clipper">
+  <div class="gallery">
+    <img class="main-img" src="images/dai3.jpg" alt="Nail Clipper" />
+  </div>
+  <h3>Nail Clipper</h3>
+  <p>High-quality stainless steel nail clipper for precise and clean cuts. Comfortable grip design for easy handling. Ideal for both fingernails and toenails. Made in Japan 🇯🇵</p>
+  <div class="price">Rs. 550</div>
+  <button onclick="addToCart('Nail Clipper', 550)">Add to Cart</button>
+  <a class="whatsapp-button" href="https://wa.me/94779552234?text=I%20want%20to%20order%20Nail%20Clipper%20(Rs.%20550)">Order via WhatsApp</a>
+</div>
+<div class="product product-item" data-name="Perforated Knife">
+  <div class="gallery">
+    <img class="main-img" src="images/dai4.jpg" alt="Perforated Knife" />
+  </div>
+  <h3>Perforated Knife</h3>
+  <p>Lightweight stainless steel perforated knife, ideal for slicing vegetables and fruits with less sticking. Ergonomic handle for comfort and precision. Made in Japan 🇯🇵</p>
+  <div class="price">Rs. 970</div>
+  <button onclick="addToCart('Perforated Knife', 970)">Add to Cart</button>
+  <a class="whatsapp-button" href="https://wa.me/94779552234?text=I%20want%20to%20order%20Perforated%20Knife%20(Rs.%201250)">Order via WhatsApp</a>
+</div>
+<div class="product product-item" data-name="Ice Ball Maker">
+  <div class="gallery">
+    <img class="main-img" src="images/dai6.jpg" alt="Ice Ball Maker" />
+  </div>
+  <h3>Premium Ice Ball Maker</h3>
+  <p>Creates perfectly round 3.2 cm ice spheres that melt slower, keeping drinks colder for longer. Made from BPA-free, food-grade material. Easy to use, reusable, and dishwasher safe.</p>
+  <div class="price">Rs. 670</div>
+  <button onclick="addToCart('Ice Ball Maker', 670)">Add to Cart</button>
+  <a class="whatsapp-button" href="https://wa.me/94779552234?text=I%20want%20to%20order%20Ice%20Ball%20Maker%20(Rs.%201250)">Order via WhatsApp</a>
+</div>
+<div class="product product-item" data-name="Egg Cutter">
+  <div class="gallery">
+    <img class="main-img" src="images/dai7.jpg" alt="Egg Cutter" />
+  </div>
+  <h3>Egg Cutter</h3>
+  <p>Handy kitchen tool for slicing boiled eggs evenly. Features stainless steel wires and a sturdy base for quick, clean cuts. Perfect for salads, sandwiches, and garnishes. Made in Japan 🇯🇵</p>
+  <div class="price">Rs. 670</div>
+  <button onclick="addToCart('Egg Cutter', 670)">Add to Cart</button>
+  <a class="whatsapp-button" href="https://wa.me/94779552234?text=I%20want%20to%20order%20Egg%20Cutter%20(Rs.%20980)">Order via WhatsApp</a>
+</div>
+
+<div class="product product-item" data-name="Stainless Scissors">
+  <div class="gallery">
+    <img class="main-img" src="images/dai8.jpg" alt="Stainless Scissors" />
+  </div>
+  <h3>Stainless Scissors</h3>
+  <p>High-quality stainless steel scissors designed for precise and effortless cutting. Comfortable ergonomic handles ensure a firm grip for everyday tasks at home or office. Durable and rust-resistant for long-lasting use.</p>
+  <div class="price">Rs. 420</div>
+  <button onclick="addToCart('Stainless Scissors', 420)">Add to Cart</button>
+  <a class="whatsapp-button" href="https://wa.me/94779552234?text=I%20want%20to%20order%20Stainless%20Scissors%20(Rs.%20420)">Order via WhatsApp</a>
+</div>
+
+<div class="product product-item" data-name="Stainless Paper Cutting Scissors">
+  <div class="gallery">
+    <img class="main-img" src="images/dai9.jpg" alt="Stainless Paper Cutting Scissors" />
+  </div>
+  <h3>Stainless Paper Cutting Scissors</h3>
+  <p>Durable stainless steel scissors designed specifically for precise and smooth paper cutting. Comfortable grip handles provide excellent control for crafts, office, or school use. Rust-resistant and built to last.</p>
+  <div class="price">Rs. 640</div>
+  <button onclick="addToCart('Stainless Paper Cutting Scissors', 640)">Add to Cart</button>
+  <a class="whatsapp-button" href="https://wa.me/94779552234?text=I%20want%20to%20order%20Stainless%20Paper%20Cutting%20Scissors%20(Rs.%20640)">Order via WhatsApp</a>
+</div>
+
+
+
+
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Little Buds Japan Imports | Akurana, Kandy, Sri Lanka</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    function addToCart(name, price) {
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+      cart.push({ name, price });
+      localStorage.setItem('cart', JSON.stringify(cart));
+      updateCartCount();
+    }
+
+    function updateCartCount() {
+      const cart = JSON.parse(localStorage.getItem('cart')) || [];
+      document.getElementById('cart-count').innerText = cart.length;
+    }
+
+    function filterProducts() {
+      const input = document.getElementById("searchInput").value.toLowerCase();
+      const products = document.querySelectorAll(".product");
+      products.forEach(product => {
+        const match = product.getAttribute("data-name").toLowerCase().includes(input);
+        product.style.display = match ? "block" : "none";
+      });
+    }
+
+    // Initialize
+    updateCartCount();
+  </script>
+</body>
+</html>

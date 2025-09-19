@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Science & Tech Toys | Little Buds Japan Imports</title>
+  <link rel="stylesheet" href="styles.css" />
+ <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7cce2;
+      margin: 0;
+      padding: 0;
+    }
+
+   .product-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+    }
+    .product {
+      border: 1px solid #ddd;
+      padding: 15px;
+      max-width: 250px;
+      text-align: center; my
+      background:  #f4f4f4;
+      border-radius: 8px;
+    }
+    .gallery img {
+      width: 100%;
+      height: auto;
+      border-radius: 5px;}
+    .thumbs img {
+      width: 70px;
+      margin: 5px;
+      cursor: pointer;
+      border: 2px solid transparent;
+      border-radius: 4px;
+    }
+
+    .thumbs img:hover {
+      border-color: #999;
+    }
+
+    .price {
+      font-weight: bold;
+      color: #c2185b;
+      font-size: 1.2em;
+      margin: 10px 0;
+    }
+
+    button,
+.whatsapp-button {
+  display: inline-block;
+  padding: 10px 15px;
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  min-width: 150px; /* makes widths match */
+  box-sizing: border-box;
+}
+
+/* Normal Add to Cart button */
+button {
+  background-color: #ff4081;
+  color: white;
+}
+
+button:hover {
+  background-color: #e73370;
+}
+
+/* WhatsApp button */
+.whatsapp-button {
+  background-color: #25D366;
+  color: white;
+}
+
+.whatsapp-button:hover {
+  background-color: #1eb653;
+}
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
+      background:  #f7cce2;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    }
+
+    .logo img {
+      height: 50px;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #333;
+    }
+
+    .cart-icon {
+      position: fixed;
+      top: 15px;
+      right: 15px;
+      z-index: 1000;
+    }
+
+    .cart-icon img {
+      width: 40px;
+      height: 40px;
+    }
+
+    #cart-count {
+      position: absolute;
+      top: -5px;
+      right: -5px;
+      background: red;
+      color: white;
+      font-size: 12px;
+      border-radius: 50%;
+      padding: 2px 6px;
+    }
+
+    .search-bar {
+      text-align: center;
+      margin: 20px auto 10px;
+    }
+
+    #searchInput {
+      padding: 10px;
+      width: 90%;
+      max-width: 400px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #f3f3f3;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Cart Icon -->
+  <a href="cart.html" class="cart-icon">
+    <img src="images/cart-icon.png" alt="Cart" />
+    <span id="cart-count">0</span>
+  </a>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <a href="index.html"><img src="images/logo.png" alt="Little Buds Logo" /></a>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="delivery.html">Delivery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+ <li><a href="faq.html">FAQ</a></li> <!-- update if you plan a separate faq.html -->
+        
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Search Bar -->
+  <div class="search-bar">
+    <input
+      type="text"
+      id="searchInput"
+      placeholder="Search science toys..."
+      oninput="filterProducts()" />
+  </div>
+
+  <!-- Product Grid -->
+  <main>
+    <h2 style="text-align:center; margin-top:20px;">Science & Technology Toys</h2>
+    <div class="product-grid">
+
+      <!-- Product 1 -->
+ <div class="product">
+  <div class="gallery">
+    <img class="main-img" src="images/microscope.jpg" id="micImage" alt="Portable Handheld Microscope" />
+    <div class="thumbs">
+      <img onclick="document.getElementById('micImage').src='images/microscope1.jpg'" src="images/microscope1.jpg" />
+      <img onclick="document.getElementById('micImage').src='images/microscope.jpg'" src="images/microscope.jpg" />
+      <img onclick="document.getElementById('micImage').src='images/microscope2.jpg'" src="images/microscope2.jpg" />
+    </div>
+  </div>
+
+  <h3>🔬 Portable Handheld Microscope (60x–120x Zoom)</h3>
+  <p>
+    Explore the microscopic world anywhere you go with this powerful and compact Portable Handheld Microscope.
+    Designed for both kids and adults, this lightweight tool offers <strong>60x to 120x magnification</strong>,
+    letting you see stunning details in leaves, fabrics, insects, coins, and more — all in real time!
+  </p>
+
+  <ul>
+    <li>🔍 <strong>Zoom Magnification:</strong> 60x–120x adjustable zoom</li>
+    <li>🔧 <strong>Crystal-Clear Focus:</strong> Precision focus knob for sharp imaging</li>
+    <li>💡 <strong>Built-in LED Light:</strong> Enhances visibility in any lighting condition</li>
+    <li>🖐️ <strong>Portable & Ergonomic:</strong> Fits comfortably in your hand and pocket</li>
+    <li>🎓 <strong>Educational & Fun:</strong> Great for young explorers, students, hobbyists, and science lovers</li>
+  </ul>
+
+  <p><strong>Perfect for:</strong></p>
+  <ul>
+    <li>🌿 Nature observation</li>
+    <li>📚 Educational activities</li>
+    <li>🪙 Hobby collecting (stamps, coins, insects)</li>
+    <li>🔍 Everyday discovery and curiosity!</li>
+  </ul>
+
+  <p class="price">Rs.2120</p>
+  <button onclick="addToCart('Portable Handheld Microscope', 2120)">Add to Cart</button>
+  <a class="whatsapp-button" href="https://wa.me/94779552234?text=Hi! I'm interested in the Portable Handheld Microscope.">Order via WhatsApp</a>
+</div>
+<div class="product product-item">
+  <div class="gallery">
+    <img class="main-img" src="images/solarcar.jpg" id="solar" alt="Solar Powered Car" />
+    <div class="thumbs">
+      <img onclick="document.getElementById('solar').src='images/solarcar1.jpg'" src="images/solarcar1.jpg" alt="Solar Powered Car - Side View" />
+      <img onclick="document.getElementById('solar').src='images/solarcar.jpg'" src="images/solarcar.jpg" alt="Solar Powered Car - Main View" />
+    </div>
+  </div>
+
+  <div class="product-details">
+    <h2 class="product-title">Solar Powered DIY Car Kit – Educational STEM Toy</h2>
+
+    <p class="product-description">
+      Introduce your kids to the world of clean energy and engineering with this hands-on 
+      <strong>Solar Powered Car Kit</strong>! Designed to encourage curiosity and creativity, this DIY project lets 
+      children build their own working vehicle powered by solar energy — no batteries needed!
+    </p>
+
+    <ul class="product-features">
+      <li>🔋 <strong>Solar Powered:</strong> Runs on direct sunlight with an included solar panel</li>
+      <li>🧩 <strong>STEM Learning:</strong> Teaches basic electronics, mechanics, and green energy concepts</li>
+      <li>🔧 <strong>DIY Assembly:</strong> Improves creativity and problem-solving skills</li>
+      <li>🚗 <strong>Durable Design:</strong> Lightweight and sturdy for smooth movement</li>
+      <li>🎓 <strong>Educational & Fun:</strong> Great for school projects and home learning</li>
+    </ul>
+
+
+
+
+
+
+
+
+ <p class="price">Rs. 1100</p>
+
+ <div class="product-buttons">
+  <button onclick="addToCart('Powered Car Kit', 1100)">Add to Cart</button>
+
+  <a class="whatsapp-button" href="https://wa.me/94779552234?text=Hi! I'm interested in the solar powered car kit.">Order via WhatsApp</a>
+</div>
+</div>
+</div>
+
+
+
+      <div class="product">
+        <div class="gallery">
+          <img class="main-img" src="images/straw.jpg" id="robotImage" alt="Engineering Building Toy" />
+          <div class="thumbs">
+            <img onclick="document.getElementById('robotImage').src='images/straw1.jpg'" src="images/straw1.jpg" />
+            <img onclick="document.getElementById('robotImage').src='images/straw2.jpg'" src="images/straw2.jpg" />
+            <img onclick="document.getElementById('robotImage').src='images/straw4.jpg'" src="images/straw4.jpg" />
+          </div>
+        </div>
+        <h3>Engineering Building Toy</h3>
+        <ul>
+          <li>Safe for Kids</li>
+          <li>Enhances Fine Motor Skills</li>
+          <li>Boosts Creativity and Imagination</li>
+          <li>Improves Hand-Eye Coordination</li>
+        </ul>
+        <p class="price">Rs. 1,670</p>
+        <button onclick="addToCart('Engineering Building Toy', 1670)">Add to Cart</button>
+        <a class="whatsapp-button" href="https://wa.me/94779552234?text=Hi! I'm interested in the Engineering Building Toy.">Order via WhatsApp</a>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="product">
+        <div class="gallery">
+          <img class="main-img" src="images/solar.jpg" id="solarImage" alt="Solar System Board" />
+          <div class="thumbs">
+            <img onclick="document.getElementById('solarImage').src='images/solar1.jpg'" src="images/solar1.jpg" />
+            <img onclick="document.getElementById('solarImage').src='images/solar2.jpg'" src="images/solar2.jpg" />
+          </div>
+        </div>
+        <h3>Solar System Board</h3>
+        <ul>
+          <li>Includes planets, astronaut, alien & 41 pieces</li>
+          <li>Teaches space knowledge scientifically</li>
+          <li>Montessori play, interactive fun</li>
+        </ul>
+        <p class="price">Rs. 3,360</p>
+        <button onclick="addToCart('Solar System Board', 3360)">Add to Cart</button>
+        <a class="whatsapp-button" href="https://wa.me/94779552234?text=Hi! I'm interested in the Solar System Board.">Order via WhatsApp</a>
+      </div>
+
+
+
+
+      <!-- Product 3 -->
+      <div class="product">
+        <div class="gallery">
+          <img class="main-img" src="images/ins.jpg" id="insectImage" alt="Insect Exploration Kit" />
+          <div class="thumbs">
+            <img onclick="document.getElementById('insectImage').src='images/ins1.jpg'" src="images/ins1.jpg" />
+            <img onclick="document.getElementById('insectImage').src='images/ins2.jpg'" src="images/ins2.jpg" />
+            <img onclick="document.getElementById('insectImage').src='images/ins3.jpg'" src="images/ins3.jpg" />
+<img onclick="document.getElementById('insectImage').src='images/ins.jpg'" src="images/ins.jpg" />
+          </div>
+        </div>
+        <h3>Insect Exploration Kit</h3>
+        <ul>
+          <li>Promotes outdoor play & curiosity</li>
+          <li>STEM learning: biology, observation</li>
+          <li>Includes safe tools for insect study</li>
+        </ul>
+        <p class="price">Rs. 1,870</p>
+        <button onclick="addToCart('Insect Exploration Kit', 1870)">Add to Cart</button>
+        <a class="whatsapp-button" href="https://wa.me/94779552234?text=Hi! I'm interested in the Insect Exploration Kit.">Order via WhatsApp</a>
+      </div>
+
+ 
+
+
+
+<div class="product">
+        <div class="gallery">
+          <img class="main-img" src="images/insect.jpg" id="insectimage" alt="insect board" />
+          <div class="thumbs">
+            <img onclick="document.getElementById('insectimage').src='images/insect2.jpg'" src="images/insect2.jpg" />
+            <img onclick="document.getElementById('insectimage').src='images/insect3.jpg'" src="images/insect3.jpg" />
+  <img onclick="document.getElementById('insectimage').src='images/insect.jpg'" src="images/insect.jpg" />
+          </div>
+        </div>
+  <h3>Insect Board Interactive Play Set</h3>
+  <ul style="text-align: left;">
+    <li>🐞 Kids and parents can interact with various insect elements to create educational scenes.</li>
+    <li>🐞 A fun way to teach children to recognize insects.</li>
+    <li>🪲 Includes caterpillar, bee, butterfly, dragonfly, snail, ladybird, lizard, and more.</li>
+    <li>🪲 Place elements wherever you like to create grassland stories.</li>
+    <li>🪲 Great for imagination and bonding between kids and parents.</li>
+  </ul>
+
+  <p class="price">Rs.3360</p>
+  <button onclick="addToCart('Insect Board Interactive Play Set', 3360)">Add to Cart</button>
+  <a class="whatsapp-button" href="https://wa.me/94779552234?text=Hi! I'm interested in the Insect Board Interactive Play Set.">Order via WhatsApp</a>
+</div>
+ <div class="product">
+        <div class="gallery">
+          <img class="main-img" src="images/vehicle.jpg" id="veh" alt="vehicle board" />
+          <div class="thumbs">
+            <img onclick="document.getElementById('veh').src='images/vehicle1.jpg'" src="images/vehicle1.jpg" />
+            <img onclick="document.getElementById('veh').src='images/vehicle2.jpg'" src="images/vehicle2.jpg" />
+ <img onclick="document.getElementById('veh').src='images/vehicle.jpg'" src="images/vehicle.jpg" />
+          </div>
+        </div>
+<div class="product-card">
+  <h2>Vehicle Theme Felt Board Set</h2>
+  <p><strong>Price:</strong> LKR 3,360.00</p>
+  
+  <ul>
+    <li>🚗 <strong>Designed for Curiosity:</strong> Specially made to satisfy kids' interest in various kinds of transportation.</li>
+    <li>🚗 <strong>Interactive Play:</strong> Kids can stick cards on the blue felt board and create fun stories with family or friends.</li>
+    <li>🚗 <strong>Educational Fun:</strong> Parents can teach children to recognize different vehicles while playing.</li>
+    <li>🚗 <strong>Skill Development:</strong> Enhances kids' patience, recognition skills, and color perception.</li>
+    <li>🚗 <strong>Perfect Gift & Decor:</strong> Ideal for birthdays, classroom decoration, kindergarten activities, and Montessori teaching.</li>
+  </ul>
+  
+  <p>This flannel board kit is both a fun activity and an educational tool—great for homes, classrooms, and daycares!</p>
+</div>
+<p class="price">Rs.3360</p>
+  <button onclick="addToCart('vehicle board', 3360)">Add to Cart</button>
+  <a class="whatsapp-button" href="https://wa.me/94779552234?text=Hi! I'm interested in the vrhicle Board Interactive Play Set.">Order via WhatsApp</a>
+</div>
+
+
+<div class="product product-item" data-name="Flower Garden Building Toy" >
+  <div class="gallery">
+    <img class="main-img" src="images/flower.jpg" id="flowerImage" alt="Flower Garden Toy" />
+    <div class="thumbs">
+      <img onclick="document.getElementById('flowerImage').src='images/flower1.jpg'" src="images/flower1.jpg" alt="Flower Garden Toy - Design 1" />
+      <img onclick="document.getElementById('flowerImage').src='images/flower2.jpg'" src="images/flower2.jpg" alt="Flower Garden Toy - Design 2" />
+ <img onclick="document.getElementById('flowerImage').src='images/flower.jpg'" src="images/flower.jpg" alt="Flower Garden Toy - Design 2" />
+    </div>
+  </div>
+  <h3>Flower Garden Building Toy</h3>
+  <ul>
+    <li>64 colorful pieces to create bouquets</li>
+    <li>STEM toy for creativity and coordination</li>
+    <li>Indoor and outdoor play</li>
+  </ul>
+  <p class="price">Rs. 1,480</p>
+  <button onclick="addToCart('Flower Garden Building Toy', 1480)">Add to Cart</button>
+  <a class="whatsapp-button" href="https://wa.me/94779552234?text=Hi! I'm interested in the Flower Garden Building Toy." target="_blank" rel="noopener noreferrer">Order via WhatsApp</a>
+</div>
+
+
+    </div>
+
+
+    
+
+    <!-- No Results Message -->
+    <p id="noResults" style="display: none; text-align: center; color: #888; padding: 20px;">
+      No results found.
+    </p>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Little Buds Japan Imports | Akurana, Kandy, Sri Lanka</p>
+  </footer>
+
+  <script>
+    function addToCart(name, price) {
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+      cart.push({ name: name, price: price });
+      localStorage.setItem('cart', JSON.stringify(cart));
+      updateCartCount();
+      alert(name + " has been added to your cart.");
+    }
+
+    function updateCartCount() {
+      const cart = JSON.parse(localStorage.getItem('cart')) || [];
+      document.getElementById('cart-count').textContent = cart.length;
+    }
+
+    updateCartCount();
+
+    function filterProducts() {
+      const input = document.getElementById("searchInput").value.toLowerCase();
+      const items = document.querySelectorAll(".product");
+      let anyVisible = false;
+
+      items.forEach(item => {
+        const text = item.textContent.toLowerCase();
+        if (text.includes(input)) {
+          item.style.display = "block";
+          anyVisible = true;
+        } else {
+          item.style.display = "none";
+        }
+      });
+
+      document.getElementById("noResults").style.display = anyVisible ? "none" : "block";
+    }
+  </script>
+</body>
+</html>
+
+
